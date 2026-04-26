@@ -3,38 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI破局作战档案 | 24份会议纪要术语道拆解</title>
-  <meta name="description" content="把24份AI破局会议纪要整理成嘉宾身份、真实结果、关键数据、核心故事、方法框架、工具清单和金句的术语道讲解网页。" />
-  <meta property="og:title" content="AI破局作战档案" />
-  <meta property="og:description" content="24份会议纪要，一套术语道拆解卡。" />
+  <title>AI破局大会 · 道法术器拆解档案</title>
+  <meta name="description" content="24份AI破局会议纪要，按嘉宾身份、真实结果、价值评分、道法术器、隐藏连接、行动清单和锦成视角重新拆解。" />
+  <meta property="og:title" content="AI破局大会 · 道法术器拆解档案" />
+  <meta property="og:description" content="从逐字稿到道法术器：24份会议纪要的作战级拆解。" />
   <meta property="og:type" content="website" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@600;800;900&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@700;900&display=swap");
 
     :root {
-      --black: #0d0e0b;
-      --black-2: #151711;
-      --black-3: #1d2017;
-      --paper: #f4ecd7;
-      --paper-2: #e8dcc0;
-      --paper-3: #cfc09e;
-      --ink: #181914;
-      --muted: #807760;
-      --red: #ff5438;
-      --gold: #e2b84c;
-      --green: #3bd493;
-      --blue: #62b9ff;
-      --line: rgba(244, 236, 215, 0.16);
-      --line-strong: rgba(244, 236, 215, 0.32);
-      --shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+      --bg: #090908;
+      --panel: #11120f;
+      --panel-2: #171914;
+      --paper: #f6ecd5;
+      --paper-2: #e4d2a8;
+      --muted: #9a8f75;
+      --ink: #171612;
+      --line: rgba(246, 236, 213, 0.16);
+      --line-strong: rgba(246, 236, 213, 0.34);
+      --red: #ff4e2f;
+      --gold: #e4b95a;
+      --green: #48d89b;
+      --cyan: #61c6ff;
+      --violet: #b997ff;
+      --shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
       --radius: 8px;
     }
 
     * { box-sizing: border-box; }
 
     html {
+      background: var(--bg);
       scroll-behavior: smooth;
-      background: var(--black);
     }
 
     body {
@@ -42,9 +42,9 @@
       min-height: 100vh;
       color: var(--paper);
       background:
-        repeating-linear-gradient(90deg, rgba(244, 236, 215, 0.035) 0 1px, transparent 1px 88px),
-        repeating-linear-gradient(0deg, rgba(244, 236, 215, 0.028) 0 1px, transparent 1px 88px),
-        var(--black);
+        linear-gradient(90deg, rgba(246,236,213,.045) 1px, transparent 1px) 0 0 / 84px 84px,
+        linear-gradient(0deg, rgba(246,236,213,.035) 1px, transparent 1px) 0 0 / 84px 84px,
+        var(--bg);
       font-family: "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.65;
       text-rendering: optimizeLegibility;
@@ -56,60 +56,58 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      opacity: 0.16;
+      opacity: .12;
       background-image:
-        linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
-      background-size: 5px 5px;
-      mix-blend-mode: soft-light;
+        repeating-linear-gradient(0deg, rgba(255,255,255,.08) 0 1px, transparent 1px 4px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 1px, transparent 1px 4px);
+      mix-blend-mode: overlay;
       z-index: 0;
     }
 
     a { color: inherit; text-decoration: none; }
     button, input { font: inherit; }
 
-    .site {
-      position: relative;
-      z-index: 1;
-    }
+    .site { position: relative; z-index: 1; }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 30;
+      z-index: 50;
       border-bottom: 1px solid var(--line);
-      background: rgba(13, 14, 11, 0.88);
-      backdrop-filter: blur(14px);
+      background: rgba(9, 9, 8, .9);
+      backdrop-filter: blur(18px);
     }
 
     .topbar-inner {
-      max-width: 1440px;
+      max-width: 1500px;
       margin: 0 auto;
       padding: 12px 24px;
       display: grid;
       grid-template-columns: auto minmax(0, 1fr) auto;
-      align-items: center;
       gap: 18px;
+      align-items: center;
     }
 
     .brand {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-family: "JetBrains Mono", monospace;
+      font-family: "IBM Plex Mono", monospace;
       font-size: 12px;
-      letter-spacing: 0.12em;
+      font-weight: 700;
+      letter-spacing: .14em;
       text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .brand-mark {
-      width: 34px;
-      height: 34px;
       display: grid;
       place-items: center;
+      width: 34px;
+      height: 34px;
       border: 1px solid var(--line-strong);
       color: var(--red);
-      background: var(--black-2);
+      background: var(--panel);
     }
 
     .nav {
@@ -120,223 +118,243 @@
     }
 
     .nav a {
-      min-height: 34px;
       display: inline-flex;
       align-items: center;
+      min-height: 34px;
       border: 1px solid transparent;
       padding: 0 12px;
-      color: rgba(244, 236, 215, 0.72);
+      color: rgba(246, 236, 213, .7);
       font-size: 13px;
       white-space: nowrap;
-      transition: color .18s ease, border-color .18s ease, background .18s ease;
+      transition: .18s ease;
     }
 
     .nav a:hover {
       color: var(--paper);
       border-color: var(--line-strong);
-      background: var(--black-2);
+      background: var(--panel);
     }
 
-    .contact-chip {
+    .wechat-pill {
+      min-height: 34px;
       display: inline-flex;
       align-items: center;
-      min-height: 34px;
       border: 1px solid var(--red);
       padding: 0 12px;
       color: var(--paper);
-      background: rgba(255, 84, 56, 0.12);
+      background: rgba(255, 78, 47, .12);
       font-size: 13px;
       white-space: nowrap;
     }
 
     .hero {
-      max-width: 1440px;
+      max-width: 1500px;
       margin: 0 auto;
-      padding: 80px 24px 42px;
+      padding: 70px 24px 30px;
       display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.72fr);
-      gap: 48px;
-      align-items: end;
+      grid-template-columns: minmax(0, 1fr) minmax(360px, .62fr);
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .hero-main {
+      min-height: 640px;
+      position: relative;
+      border: 1px solid var(--line-strong);
+      background:
+        linear-gradient(135deg, rgba(255,78,47,.14), transparent 42%),
+        linear-gradient(180deg, rgba(246,236,213,.04), transparent),
+        var(--panel);
+      padding: clamp(28px, 5vw, 58px);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main::after {
+      content: "道 法 术 器";
+      position: absolute;
+      right: -2vw;
+      bottom: -4vw;
+      color: rgba(246,236,213,.045);
+      font-family: "Noto Serif SC", serif;
+      font-size: clamp(80px, 14vw, 220px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 0;
+      pointer-events: none;
     }
 
     .kicker {
       color: var(--green);
-      font-family: "JetBrains Mono", monospace;
+      font-family: "IBM Plex Mono", monospace;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: .18em;
       text-transform: uppercase;
     }
 
     .hero h1 {
-      margin: 18px 0 0;
-      max-width: 920px;
+      position: relative;
+      z-index: 1;
+      max-width: 950px;
+      margin: 22px 0 0;
       font-family: "Noto Serif SC", serif;
-      font-size: clamp(52px, 9vw, 126px);
+      font-size: clamp(52px, 8.4vw, 132px);
       font-weight: 900;
       letter-spacing: 0;
-      line-height: 0.92;
+      line-height: .92;
     }
 
-    .hero h1 span {
-      color: var(--red);
-      text-shadow: 0 0 0 var(--red);
-    }
+    .hero h1 span { color: var(--red); }
 
     .hero-copy {
+      position: relative;
+      z-index: 1;
       max-width: 760px;
-      margin-top: 26px;
-      color: rgba(244, 236, 215, 0.76);
-      font-size: clamp(16px, 1.6vw, 20px);
+      margin: 24px 0 0;
+      color: rgba(246, 236, 213, .76);
+      font-size: clamp(16px, 1.45vw, 20px);
+      line-height: 1.85;
     }
 
     .hero-actions {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 32px;
+      margin-top: 34px;
     }
 
-    .hero-actions a {
+    .hero-actions a,
+    .action-btn {
+      min-height: 48px;
       display: inline-flex;
       align-items: center;
-      min-height: 48px;
+      justify-content: center;
       border: 1px solid var(--line-strong);
       padding: 0 18px;
-      background: var(--black-2);
       color: var(--paper);
-      font-weight: 700;
-      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+      background: var(--panel-2);
+      font-weight: 800;
+      cursor: pointer;
+      transition: .18s ease;
     }
 
-    .hero-actions a:first-child {
+    .hero-actions a:first-child,
+    .action-btn.primary {
       border-color: var(--red);
       background: var(--red);
-      color: #170c08;
+      color: #150907;
     }
 
-    .hero-actions a:hover {
+    .hero-actions a:hover,
+    .action-btn:hover {
       transform: translateY(-2px);
       border-color: var(--paper);
     }
 
-    .archive-visual {
-      min-height: 540px;
+    .method-panel {
       border: 1px solid var(--line-strong);
-      background: var(--black-2);
+      background: var(--paper);
+      color: var(--ink);
       box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .archive-visual::before {
-      content: "";
-      position: absolute;
-      inset: 18px;
-      border: 1px solid rgba(244, 236, 215, 0.14);
-      pointer-events: none;
-    }
-
-    .visual-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 24px 24px 18px;
-      border-bottom: 1px solid var(--line);
-      font-family: "JetBrains Mono", monospace;
-      font-size: 12px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(244, 236, 215, 0.62);
-    }
-
-    .visual-stack {
-      padding: 22px;
+      padding: 20px;
       display: grid;
-      gap: 9px;
+      align-content: start;
+      gap: 12px;
     }
 
-    .visual-row {
+    .method-panel h2 {
+      margin: 0;
+      font-family: "Noto Serif SC", serif;
+      font-size: clamp(28px, 3vw, 46px);
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .pipeline-step {
       display: grid;
-      grid-template-columns: 46px 1fr auto;
-      align-items: center;
-      gap: 10px;
-      min-height: 42px;
-      border: 1px solid rgba(244, 236, 215, 0.13);
-      padding: 0 12px;
-      background: rgba(244, 236, 215, 0.035);
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      border: 1px solid rgba(23, 22, 18, .14);
+      background: rgba(23, 22, 18, .035);
+      padding: 12px;
     }
 
-    .visual-row b {
-      color: var(--gold);
-      font-family: "JetBrains Mono", monospace;
-      font-size: 12px;
+    .pipeline-step b {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      color: var(--red);
+      border: 1px solid rgba(23,22,18,.24);
+      font-family: "IBM Plex Mono", monospace;
     }
 
-    .visual-row span {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      color: rgba(244, 236, 215, 0.82);
+    .pipeline-step h3 {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.3;
+    }
+
+    .pipeline-step p {
+      margin: 5px 0 0;
+      color: rgba(23, 22, 18, .68);
       font-size: 14px;
-    }
-
-    .visual-row em {
-      color: var(--green);
-      font-family: "JetBrains Mono", monospace;
-      font-size: 11px;
-      font-style: normal;
+      line-height: 1.55;
     }
 
     .stats {
-      max-width: 1440px;
+      max-width: 1500px;
       margin: 0 auto;
-      padding: 18px 24px 72px;
+      padding: 20px 24px 74px;
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 1px;
     }
 
     .stat {
+      min-height: 156px;
       border: 1px solid var(--line);
-      background: var(--black-2);
+      background: var(--panel);
       padding: 22px;
-      min-height: 150px;
     }
 
     .stat span {
-      color: rgba(244, 236, 215, 0.58);
-      font-family: "JetBrains Mono", monospace;
+      color: rgba(246,236,213,.58);
+      font-family: "IBM Plex Mono", monospace;
       font-size: 12px;
-      letter-spacing: 0.15em;
+      letter-spacing: .16em;
       text-transform: uppercase;
     }
 
     .stat strong {
       display: block;
-      margin-top: 16px;
+      margin-top: 14px;
       color: var(--gold);
       font-family: "Noto Serif SC", serif;
-      font-size: clamp(40px, 5vw, 74px);
+      font-size: clamp(38px, 5vw, 72px);
       line-height: 1;
+      letter-spacing: 0;
     }
 
     .stat p {
-      margin: 16px 0 0;
-      color: rgba(244, 236, 215, 0.72);
+      margin: 14px 0 0;
+      color: rgba(246,236,213,.7);
       font-size: 14px;
     }
 
     .section {
-      max-width: 1440px;
+      max-width: 1500px;
       margin: 0 auto;
       padding: 0 24px 76px;
     }
 
     .section-head {
       display: grid;
-      grid-template-columns: minmax(220px, 0.4fr) minmax(0, 1fr);
-      gap: 28px;
+      grid-template-columns: minmax(220px, .36fr) minmax(0, 1fr);
+      gap: 26px;
       align-items: end;
       border-top: 1px solid var(--line-strong);
       padding-top: 26px;
@@ -346,79 +364,108 @@
     .section-head h2 {
       margin: 0;
       font-family: "Noto Serif SC", serif;
-      font-size: clamp(32px, 5vw, 70px);
-      line-height: 1.05;
+      font-size: clamp(32px, 5vw, 72px);
+      line-height: 1.06;
       letter-spacing: 0;
     }
 
-    .insights {
+    .connections {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 1px;
     }
 
-    .insight {
-      min-height: 236px;
+    .connection {
+      min-height: 250px;
       border: 1px solid var(--line);
-      background: var(--black-2);
+      background: var(--panel);
       padding: 20px;
+      transition: .18s ease;
     }
 
-    .insight i {
-      color: var(--blue);
-      font-family: "JetBrains Mono", monospace;
+    .connection:hover {
+      transform: translateY(-3px);
+      border-color: var(--red);
+    }
+
+    .connection i {
+      color: var(--cyan);
+      font-family: "IBM Plex Mono", monospace;
       font-style: normal;
       font-size: 12px;
     }
 
-    .insight h3 {
-      margin: 26px 0 0;
-      color: var(--paper);
+    .connection h3 {
+      margin: 28px 0 0;
       font-size: 20px;
       line-height: 1.35;
     }
 
-    .insight p {
+    .connection p {
       margin: 14px 0 0;
-      color: rgba(244, 236, 215, 0.68);
+      color: rgba(246,236,213,.68);
       font-size: 14px;
+    }
+
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .action-card {
+      border: 1px solid var(--line-strong);
+      background: var(--panel);
+      padding: 22px;
+    }
+
+    .action-card h3 {
+      margin: 0;
+      color: var(--gold);
+      font-family: "Noto Serif SC", serif;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+
+    .action-card ul {
+      margin: 16px 0 0;
+      padding-left: 1.1em;
+      color: rgba(246,236,213,.75);
     }
 
     .toolbar {
       position: sticky;
       top: 59px;
-      z-index: 20;
+      z-index: 40;
+      margin-bottom: 30px;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-      background: rgba(13, 14, 11, 0.9);
-      backdrop-filter: blur(14px);
-      margin-bottom: 28px;
+      background: rgba(9, 9, 8, .92);
+      backdrop-filter: blur(18px);
     }
 
     .toolbar-inner {
-      max-width: 1440px;
+      max-width: 1500px;
       margin: 0 auto;
       padding: 14px 24px;
       display: grid;
-      grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
+      grid-template-columns: minmax(220px, 360px) minmax(0, 1fr);
       gap: 14px;
       align-items: center;
     }
 
     .search {
-      min-height: 42px;
       width: 100%;
+      min-height: 44px;
       border: 1px solid var(--line-strong);
       border-radius: 0;
-      background: var(--black-2);
+      outline: none;
+      background: var(--panel);
       color: var(--paper);
       padding: 0 14px;
-      outline: none;
     }
 
-    .search:focus {
-      border-color: var(--green);
-    }
+    .search:focus { border-color: var(--green); }
 
     .filters {
       display: flex;
@@ -427,48 +474,47 @@
     }
 
     .filter {
-      min-height: 42px;
+      min-height: 44px;
       border: 1px solid var(--line);
-      background: var(--black-2);
-      color: rgba(244, 236, 215, 0.72);
+      background: var(--panel);
+      color: rgba(246,236,213,.7);
       padding: 0 12px;
-      cursor: pointer;
       white-space: nowrap;
-      transition: border-color .18s ease, color .18s ease, background .18s ease;
+      cursor: pointer;
+      transition: .18s ease;
     }
 
-    .filter.is-active,
-    .filter:hover {
+    .filter:hover,
+    .filter.is-active {
       color: var(--paper);
       border-color: var(--red);
-      background: rgba(255, 84, 56, 0.12);
+      background: rgba(255,78,47,.12);
     }
 
     .cases {
-      max-width: 1440px;
+      max-width: 1500px;
       margin: 0 auto;
-      padding: 0 24px 80px;
+      padding: 0 24px 90px;
       display: grid;
-      gap: 18px;
+      gap: 22px;
     }
 
-    .case-card {
+    .case {
       border: 1px solid var(--line-strong);
       background: var(--paper);
       color: var(--ink);
-      box-shadow: 0 16px 60px rgba(0, 0, 0, 0.22);
+      box-shadow: 0 20px 70px rgba(0,0,0,.26);
       overflow: clip;
     }
 
-    .case-top {
+    .case-head {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(220px, 0.28fr);
-      gap: 18px;
-      align-items: start;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, .34fr);
+      gap: 20px;
       padding: 24px;
-      border-bottom: 1px solid rgba(24, 25, 20, 0.16);
+      border-bottom: 1px solid rgba(23,22,18,.14);
       background:
-        repeating-linear-gradient(135deg, rgba(24,25,20,0.035) 0 1px, transparent 1px 10px),
+        linear-gradient(90deg, rgba(23,22,18,.05) 1px, transparent 1px) 0 0 / 28px 28px,
         var(--paper);
     }
 
@@ -477,146 +523,235 @@
       align-items: center;
       gap: 10px;
       color: var(--muted);
-      font-family: "JetBrains Mono", monospace;
+      font-family: "IBM Plex Mono", monospace;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: .12em;
       text-transform: uppercase;
     }
 
     .case-index b {
       display: inline-grid;
       place-items: center;
-      width: 34px;
-      height: 34px;
-      border: 1px solid rgba(24, 25, 20, 0.22);
+      width: 36px;
+      height: 36px;
       color: var(--red);
+      border: 1px solid rgba(23,22,18,.22);
     }
 
     .case-title {
-      margin: 14px 0 0;
+      margin: 16px 0 0;
       font-family: "Noto Serif SC", serif;
-      font-size: clamp(28px, 4vw, 52px);
+      font-size: clamp(28px, 4vw, 54px);
       line-height: 1.08;
       letter-spacing: 0;
     }
 
-    .case-meta {
+    .case-side {
       display: grid;
-      gap: 10px;
       justify-items: end;
+      align-content: start;
+      gap: 10px;
       text-align: right;
       color: var(--muted);
-      font-family: "JetBrains Mono", monospace;
+      font-family: "IBM Plex Mono", monospace;
       font-size: 12px;
       line-height: 1.55;
     }
 
-    .theme-badge {
+    .badge {
       display: inline-flex;
-      border: 1px solid rgba(24, 25, 20, 0.22);
-      padding: 6px 10px;
+      align-items: center;
+      min-height: 30px;
+      border: 1px solid rgba(23,22,18,.22);
+      background: rgba(255,78,47,.14);
+      padding: 0 10px;
       color: var(--ink);
-      background: rgba(255, 84, 56, 0.14);
       font-family: "Noto Sans SC", sans-serif;
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
-    .field-grid {
+    .worth {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-bottom: 1px solid rgba(23,22,18,.14);
+    }
+
+    .score {
+      padding: 16px;
+      border-right: 1px solid rgba(23,22,18,.14);
+      background: rgba(23,22,18,.03);
+    }
+
+    .score:last-child { border-right: 0; }
+
+    .score h4 {
+      margin: 0 0 10px;
+      color: var(--red);
+      font-size: 13px;
+      letter-spacing: .08em;
+    }
+
+    .score-line {
+      display: grid;
+      grid-template-columns: 42px 1fr 22px;
+      gap: 8px;
+      align-items: center;
+      margin-top: 7px;
+      color: rgba(23,22,18,.7);
+      font-size: 12px;
+    }
+
+    .bar {
+      height: 8px;
+      border: 1px solid rgba(23,22,18,.18);
+      background: rgba(23,22,18,.08);
+      overflow: hidden;
+    }
+
+    .bar i {
+      display: block;
+      height: 100%;
+      background: var(--ink);
+      width: calc(var(--score) * 20%);
+    }
+
+    .extract {
       display: grid;
       grid-template-columns: repeat(7, minmax(0, 1fr));
-      border-top: 1px solid rgba(24, 25, 20, 0.08);
+      border-bottom: 1px solid rgba(23,22,18,.14);
     }
 
-    .field {
-      min-height: 220px;
-      padding: 20px;
-      border-right: 1px solid rgba(24, 25, 20, 0.14);
+    .extract-cell {
+      min-height: 190px;
+      padding: 18px;
+      border-right: 1px solid rgba(23,22,18,.14);
     }
 
-    .field:nth-child(2n) {
-      background: rgba(24, 25, 20, 0.035);
-    }
+    .extract-cell:nth-child(2n) { background: rgba(23,22,18,.035); }
+    .extract-cell:last-child { border-right: 0; }
 
-    .field:last-child {
-      border-right: 0;
-    }
-
-    .field h4 {
+    .extract-cell h4,
+    .pillar h4,
+    .mini-action h4,
+    .jc-view h4 {
       margin: 0;
       color: var(--red);
-      font-family: "JetBrains Mono", "Noto Sans SC", monospace;
+      font-family: "IBM Plex Mono", "Noto Sans SC", monospace;
       font-size: 12px;
-      letter-spacing: 0.12em;
+      letter-spacing: .12em;
       text-transform: uppercase;
     }
 
-    .field p {
-      margin: 14px 0 0;
-      color: rgba(24, 25, 20, 0.82);
-      font-size: 15px;
-      line-height: 1.75;
+    .extract-cell p,
+    .pillar p,
+    .mini-action p,
+    .jc-view p {
+      margin: 12px 0 0;
+      color: rgba(23,22,18,.8);
+      font-size: 14.5px;
+      line-height: 1.72;
     }
 
-    .empty-state {
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-bottom: 1px solid rgba(23,22,18,.14);
+    }
+
+    .pillar {
+      min-height: 180px;
+      padding: 20px;
+      border-right: 1px solid rgba(23,22,18,.14);
+    }
+
+    .pillar:last-child { border-right: 0; }
+    .pillar[data-key="道"] h4 { color: #b83c25; }
+    .pillar[data-key="法"] h4 { color: #8a611a; }
+    .pillar[data-key="术"] h4 { color: #236c4d; }
+    .pillar[data-key="器"] h4 { color: #23607d; }
+
+    .case-bottom {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, .35fr);
+      gap: 0;
+    }
+
+    .mini-action {
+      padding: 20px;
+      border-right: 1px solid rgba(23,22,18,.14);
+      background: rgba(23,22,18,.03);
+    }
+
+    .jc-view {
+      padding: 20px;
+      background: rgba(255,78,47,.08);
+    }
+
+    .empty {
       display: none;
+      max-width: 1500px;
+      margin: 0 auto 90px;
+      padding: 42px 24px;
       border: 1px solid var(--line-strong);
-      padding: 44px 24px;
-      color: rgba(244, 236, 215, 0.7);
+      background: var(--panel);
+      color: rgba(246,236,213,.7);
       text-align: center;
-      background: var(--black-2);
     }
 
     .lead {
-      max-width: 1440px;
+      max-width: 1500px;
       margin: 0 auto;
       padding: 0 24px 96px;
     }
 
     .lead-card {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(260px, 0.32fr);
+      grid-template-columns: minmax(0, 1fr) minmax(280px, .34fr);
       gap: 30px;
       align-items: center;
       border: 1px solid var(--red);
       background: #170d09;
-      padding: 34px;
+      padding: clamp(24px, 4vw, 42px);
+      box-shadow: var(--shadow);
     }
 
     .lead-card h2 {
       margin: 10px 0 0;
       font-family: "Noto Serif SC", serif;
-      font-size: clamp(32px, 5vw, 66px);
+      font-size: clamp(32px, 5vw, 68px);
       line-height: 1.04;
+      letter-spacing: 0;
     }
 
     .lead-card p {
-      max-width: 780px;
+      max-width: 800px;
       margin: 18px 0 0;
-      color: rgba(244, 236, 215, 0.72);
+      color: rgba(246,236,213,.72);
     }
 
-    .wechat {
-      border: 1px solid rgba(244, 236, 215, 0.2);
-      background: rgba(244, 236, 215, 0.06);
+    .wechat-box {
+      border: 1px solid rgba(246,236,213,.22);
+      background: rgba(246,236,213,.06);
       padding: 22px;
     }
 
-    .wechat span {
+    .wechat-box span {
       color: var(--green);
-      font-family: "JetBrains Mono", monospace;
+      font-family: "IBM Plex Mono", monospace;
       font-size: 12px;
-      letter-spacing: 0.16em;
+      font-weight: 700;
+      letter-spacing: .16em;
       text-transform: uppercase;
     }
 
-    .wechat strong {
+    .wechat-box strong {
       display: block;
       margin-top: 12px;
       color: var(--paper);
       font-family: "Noto Serif SC", serif;
-      font-size: clamp(26px, 3vw, 42px);
+      font-size: clamp(28px, 3vw, 44px);
       line-height: 1.05;
       overflow-wrap: anywhere;
     }
@@ -624,13 +759,13 @@
     .footer {
       border-top: 1px solid var(--line);
       padding: 28px 24px;
-      color: rgba(244, 236, 215, 0.55);
-      font-family: "JetBrains Mono", monospace;
+      color: rgba(246,236,213,.55);
+      font-family: "IBM Plex Mono", monospace;
       font-size: 12px;
     }
 
     .footer-inner {
-      max-width: 1440px;
+      max-width: 1500px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -647,69 +782,43 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @media (max-width: 1180px) {
+    @media (max-width: 1240px) {
       .hero,
-      .lead-card {
-        grid-template-columns: 1fr;
-      }
-
-      .archive-visual {
-        min-height: auto;
-      }
-
+      .lead-card { grid-template-columns: 1fr; }
       .stats,
-      .insights {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .field-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .field {
-        min-height: auto;
-      }
+      .connections,
+      .worth,
+      .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .extract { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .extract-cell,
+      .pillar,
+      .score { border-bottom: 1px solid rgba(23,22,18,.14); }
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 760px) {
       .topbar-inner,
       .toolbar-inner,
       .section-head,
-      .case-top {
+      .case-head,
+      .case-bottom {
         grid-template-columns: 1fr;
       }
 
-      .nav {
-        justify-content: flex-start;
-      }
-
-      .contact-chip {
-        justify-self: start;
-      }
-
-      .hero {
-        padding-top: 52px;
-      }
-
+      .nav { justify-content: flex-start; }
+      .wechat-pill { justify-self: start; }
+      .hero { padding-top: 42px; }
+      .hero-main { min-height: auto; }
       .stats,
-      .insights,
-      .field-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .case-meta {
-        justify-items: start;
-        text-align: left;
-      }
-
-      .field {
-        border-right: 0;
-        border-bottom: 1px solid rgba(24, 25, 20, 0.14);
-      }
-
-      .field:last-child {
-        border-bottom: 0;
-      }
+      .connections,
+      .action-grid,
+      .worth,
+      .extract,
+      .pillars { grid-template-columns: 1fr; }
+      .case-side { justify-items: start; text-align: left; }
+      .score,
+      .extract-cell,
+      .pillar,
+      .mini-action { border-right: 0; }
     }
   </style>
 </head>
@@ -717,78 +826,104 @@
   <div class="site">
     <header class="topbar">
       <div class="topbar-inner">
-        <a class="brand" href="#top" aria-label="返回顶部"><span class="brand-mark">AI</span><span>破局档案</span></a>
+        <a class="brand" href="#top" aria-label="返回顶部"><span class="brand-mark">道</span><span>破局拆解</span></a>
         <nav class="nav" aria-label="主导航">
-          <a href="#map">地图</a>
-          <a href="#patterns">共性洞察</a>
+          <a href="#method">固定套路</a>
+          <a href="#connections">隐藏连接</a>
+          <a href="#actions">行动清单</a>
           <a href="#cases">24份拆解</a>
-          <a href="#wechat">微信领取</a>
+          <a href="#wechat">微信</a>
         </nav>
-        <a class="contact-chip" href="#wechat">加微信拿后续版本</a>
+        <a class="wechat-pill" href="#wechat">微信号待填写</a>
       </div>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div>
-          <p class="kicker">24 Markdown / 7 Fields / One Archive</p>
-          <h1>AI破局<br /><span>作战档案</span></h1>
+      <section class="hero" id="method">
+        <div class="hero-main">
+          <p class="kicker">Dao · Fa · Shu · Qi / Terminology Dao Archive</p>
+          <h1>AI破局大会<br /><span>道法术器拆解档案</span></h1>
           <p class="hero-copy">
-            这不是会议摘要堆叠，而是把每一场分享拆成可复用的“术语道”卡片：谁讲的、拿到什么结果、用了什么数据、背后是什么故事、方法怎么复用、工具怎么落地、哪句话值得带走。
+            这版按固定套路重做：先抽取嘉宾身份、真实结果、关键数据、核心故事、方法框架、工具清单、金句；再用钱 / 关系 / 技能 / 影响力做短期与长期评分；最后进入道、法、术、器，串起跨内容隐藏连接，并给行动清单和锦成视角。
           </p>
           <div class="hero-actions">
-            <a href="#cases">进入24份拆解</a>
-            <a href="#patterns">先看共性洞察</a>
+            <a href="#cases">看24份拆解</a>
+            <a href="#connections">看大会主线</a>
           </div>
         </div>
-        <aside class="archive-visual" id="map" aria-label="档案地图">
-          <div class="visual-head"><span>Operation Map</span><span>2026 / Hangzhou</span></div>
-          <div class="visual-stack" id="visualStack"></div>
+
+        <aside class="method-panel">
+          <p class="kicker">Fixed Routine</p>
+          <h2>会议纪要不是摘要，是一套可复用的判断系统。</h2>
+          <div id="pipeline"></div>
         </aside>
       </section>
 
       <section class="stats" aria-label="统计信息">
-        <div class="stat"><span>源文件</span><strong>24</strong><p>破局拆解文件夹全量整理</p></div>
-        <div class="stat"><span>字段</span><strong>7</strong><p>身份、结果、数据、故事、框架、工具、金句</p></div>
-        <div class="stat"><span>主题</span><strong>8</strong><p>AI出海、教育、电商、PPT、App增长等</p></div>
-        <div class="stat"><span>用途</span><strong>站点</strong><p>可继续扩展成文章库、私域资料或课程页</p></div>
+        <div class="stat"><span>Source</span><strong>24</strong><p>份破局拆解Markdown</p></div>
+        <div class="stat"><span>Extract</span><strong>7</strong><p>身份、结果、数据、故事、框架、工具、金句</p></div>
+        <div class="stat"><span>Score</span><strong>4×2</strong><p>钱、关系、技能、影响力：短期/长期价值</p></div>
+        <div class="stat"><span>Core</span><strong>道法术器</strong><p>把内容拆成认知、模型、打法、工具</p></div>
       </section>
 
-      <section class="section" id="patterns">
+      <section class="section" id="connections">
         <div class="section-head">
-          <p class="kicker">Hidden Pattern</p>
-          <h2>先看穿这一批分享背后的共同结构。</h2>
+          <p class="kicker">Conference Level Thread</p>
+          <h2>跨内容隐藏连接：这场大会真正反复说的事。</h2>
         </div>
-        <div class="insights" id="insights"></div>
+        <div class="connections" id="connectionList"></div>
       </section>
 
-      <section class="section" id="cases-intro">
+      <section class="section" id="actions">
+        <div class="section-head">
+          <p class="kicker">Action List</p>
+          <h2>不再只是看热闹，直接拆成今天、本周、本月。</h2>
+        </div>
+        <div class="action-grid" id="globalActions"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="kicker">Jincheng View</p>
+          <h2>锦成视角：把大会内容转译成自己的业务动作。</h2>
+        </div>
+        <div class="action-card">
+          <h3>核心转译</h3>
+          <ul>
+            <li>不要把这些稿件当“知识笔记”，要把它们变成可持续生产的资料库、网页、私域引流页和后续产品素材。</li>
+            <li>最优先做的是“术语道模板产品化”：以后每丢一批Markdown，就自动生成同结构的网页、公众号长文、小红书笔记和行动清单。</li>
+            <li>你的优势不在复述嘉宾，而在二次翻译：把复杂分享翻译成普通人能执行的道、法、术、器。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
         <div class="section-head">
           <p class="kicker">Case Cards</p>
-          <h2>24份会议纪要，拆成可复用战术卡。</h2>
+          <h2>24份内容，逐篇进入道法术器。</h2>
         </div>
       </section>
 
       <div class="toolbar" id="cases">
         <div class="toolbar-inner">
-          <input class="search" id="searchInput" type="search" placeholder="搜索：孟建 / PPT / 关键数据 / AI App..." />
+          <input class="search" id="searchInput" type="search" placeholder="搜索：孟建 / PPT / 道 / 关系 / AI App..." />
           <div class="filters" id="filters" aria-label="主题筛选"></div>
         </div>
       </div>
 
       <section class="cases" id="caseList" aria-live="polite"></section>
-      <div class="empty-state" id="emptyState">没有匹配结果，换个关键词试试。</div>
+      <div class="empty" id="emptyState">没有匹配结果，换个关键词试试。</div>
 
       <section class="lead" id="wechat">
         <div class="lead-card">
           <div>
             <p class="kicker">Private Flow</p>
-            <h2>想要后续Markdown转换、网页源码或完整术语道模板，加微信。</h2>
-            <p>这里预留你的引流信息。你把准确微信号给我后，我会替换掉占位，并同步更新 GitHub Pages。</p>
+            <h2>要后续Markdown转换、网页源码、术语道模板，加微信。</h2>
+            <p>这里先保留你的引流位。给我准确微信号后，我会替换占位并重新推送 GitHub Pages。</p>
           </div>
-          <div class="wechat">
+          <div class="wechat-box">
             <span>WeChat</span>
-            <strong id="wechatText">微信号待填写</strong>
+            <strong>微信号待填写</strong>
           </div>
         </div>
       </section>
@@ -796,361 +931,229 @@
 
     <footer class="footer">
       <div class="footer-inner">
-        <span>AI破局作战档案 / 24 talks distilled</span>
+        <span>AI破局大会 · 道法术器拆解档案</span>
         <span>Built for siuserxiaowei · GitHub Pages</span>
       </div>
     </footer>
   </div>
 
   <script>
-    const fields = [
-      ['identity', '嘉宾身份'],
-      ['result', '真实结果'],
-      ['data', '关键数据'],
-      ['story', '核心故事'],
-      ['framework', '方法框架'],
-      ['tools', '工具清单'],
-      ['quote', '金句'],
+    const pipeline = [
+      ["01", "抽取七字段", "嘉宾身份、真实结果、关键数据、核心故事、方法框架、工具清单、金句。"],
+      ["02", "判断值不值得学", "用钱、关系、技能、影响力四维打分，同时看短期和长期价值。"],
+      ["03", "进入道法术器", "道看底层认知，法看迁移模型，术看具体打法，器看工具系统。"],
+      ["04", "跨内容隐藏连接", "把不同嘉宾之间的共性串起来，提炼大会级主线。"],
+      ["05", "行动清单", "拆成今天、本周、本月能做的动作。"],
+      ["06", "锦成视角", "把嘉宾内容转译到自己的业务场景，而不是停留在复述。"],
     ];
 
-    const insights = [
-      ['经验必须产品化', '经验本身不值钱，被整理成知识库、SOP、skills、训练营、工具包之后，才会变成可交付、可复制、可收费的资产。'],
-      ['AI不是工具，是生产组织', '多位嘉宾都把AI从聊天工具升级成员工、团队、系统：25个AI员工、13条内容产线、多Agent网站运营，都是同一个方向。'],
-      ['先闭环，再放大', 'PPT代做、跨境电商、AI App、教育改造都一样：先跑通获客、转化、交付、复购或抽佣，再谈规模。'],
-      ['普通人的机会在应用层', '基建层和平台层需要资本与工程团队，普通人更适合切具体行业痛点，用AI更快交付结果。'],
-      ['人的壁垒转向判断与温度', '流程和方法论会被复制，审美、好奇心、真实经历、价值判断、信任连接和线下关系变得更稀缺。'],
+    const fields = [
+      ["identity", "嘉宾身份"],
+      ["result", "真实结果"],
+      ["data", "关键数据"],
+      ["story", "核心故事"],
+      ["framework", "方法框架"],
+      ["tools", "工具清单"],
+      ["quote", "金句"],
     ];
+
+    const valueLabels = [
+      ["money", "钱"],
+      ["relation", "关系"],
+      ["skill", "技能"],
+      ["influence", "影响力"],
+    ];
+
+    const connections = [
+      ["经验产品化", "关云、林杰、水龙、秋叶、孟建都在讲同一件事：经验不能只存在脑子里，要变成知识库、SOP、技能包、工作台、课程或平台。"],
+      ["AI组织化", "大会里的AI不是单点工具，而是员工、团队和系统。25个AI员工、多Agent运营、13条内容产线，本质都是把AI组织化。"],
+      ["先闭环再规模", "PPT、电商、AI App、语言学习平台都不是先讲宏大叙事，而是先跑通获客、转化、交付、复购或抽佣。"],
+      ["普通人抢应用层", "洋哥、李立克等人反复强调，基建层不是普通人的主战场，普通人要抓真实行业痛点，用AI更快交付结果。"],
+      ["关系仍然是杠杆", "破局问答、关云、李尚龙都指向同一件事：AI降低技能门槛后，圈子、人脉、信任、线下链接反而更值钱。"],
+      ["人的判断更稀缺", "审美、好奇心、价值判断、第一大脑迭代、人的温度，是AI无法自动替代的核心壁垒。"],
+    ];
+
+    const globalActions = [
+      ["今天", ["选一个最接近自己资源的案例，不要贪多。", "把自己手头业务拆成获客、转化、交付、复购四段。", "建立一个最小知识库：个人经历、产品清单、客户问题、可复用SOP。"]],
+      ["本周", ["模仿一个案例跑最小闭环，比如PPT代做、资料库产品、AI内容产线。", "把一个重复工作写成AI可执行SOP。", "找3个同行或潜在客户，验证真实需求和付费点。"]],
+      ["本月", ["把跑通动作产品化：网页、私域资料、训练营、工具包或服务包。", "建立钱/关系/技能/影响力四维复盘表。", "把一个案例做成可公开传播的长文或落地页，开始积累影响力。"]],
+    ];
+
+    const themeScore = {
+      "大会战略": { money:[3,5], relation:[4,5], skill:[3,4], influence:[4,5] },
+      "PPT设计变现": { money:[5,4], relation:[3,4], skill:[5,4], influence:[3,4] },
+      "商业模式": { money:[5,5], relation:[4,5], skill:[4,5], influence:[4,5] },
+      "一人公司": { money:[3,5], relation:[3,4], skill:[5,5], influence:[4,5] },
+      "AI编程出海": { money:[4,5], relation:[3,4], skill:[5,5], influence:[4,5] },
+      "教育改造": { money:[4,5], relation:[4,5], skill:[4,5], influence:[4,5] },
+      "AI App增长": { money:[5,5], relation:[3,4], skill:[5,5], influence:[4,5] },
+      "社群问答": { money:[3,4], relation:[5,5], skill:[3,4], influence:[4,5] },
+    };
+
+    const pillarByTheme = {
+      "大会战略": {
+        dao: "AI不是单纯效率工具，而是社会组织与商业规则重新发牌。普通人的机会在应用层，用真实痛点换结果。",
+        fa: "先判断趋势层级，再选择可进入的生态位：基建层、平台层、应用层；避免用普通人资源硬打资本密集赛道。",
+        shu: "围绕一个行业痛点做小闭环：找到客户、证明付费、沉淀数据、扩大交付。",
+        qi: "大模型、知识库、自动化工作流、行业数据、社群和投资资源。"
+      },
+      "PPT设计变现": {
+        dao: "AI降低技能门槛，但提高判断和审美门槛。客户买的是正确结果，不是更多产能。",
+        fa: "把业务拆成获客、销售、交付；先自然流验证，再投流放大；从PPT扩展到可视化传达。",
+        shu: "需求拆解、生成大纲、内容填充、人工收尾；把客户模糊需求变成选择题。",
+        qi: "PPT工具、AI生成工具、小红书、闲鱼、抖音、知识库、派单系统。"
+      },
+      "商业模式": {
+        dao: "项目不是核心，商业模式才决定天花板。好生意越做越轻，坏生意越做越累。",
+        fa: "持续抽成、无限延展、复利结构、交易入口，再叠加赛道天花板和业务空间。",
+        shu: "把一次性交易改成培训获客、工具订阅、供应链抽佣、分销合作。",
+        qi: "分销系统、供应链、跨境工具、社群、私域、交易平台。"
+      },
+      "一人公司": {
+        dao: "未来不是一个人硬干，而是一个人指挥系统。人的第一大脑负责判断，AI负责重复生产。",
+        fa: "个人经验知识库化，方法论skills化，任务Agent化，产出资产化。",
+        shu: "搭建第二大脑、写SOP、配置多窗口任务、设置交互/自动两种模式。",
+        qi: "Obsidian、Cloud Code、龙虾、OpenCloud、飞书、QQ Cloud、视频插件。"
+      },
+      "AI编程出海": {
+        dao: "代码门槛下降后，真正壁垒转向需求判断、PRD质量、调试能力和运营闭环。",
+        fa: "从需求挖掘到PRD、设计、开发、合规、文案、运营，拆成AI员工组织架构。",
+        shu: "找关键词、做落地页、写需求文档、先后端后前端、测试修Bug、上线验证。",
+        qi: "Claude、GPT、OpenCloud、Stitch、Google Trends、点点数据、docs目录、海外服务器。"
+      },
+      "教育改造": {
+        dao: "教育价值从知识交付转向动力激发、人文连接、个性化路径和真实场景陪伴。",
+        fa: "把效率交给AI，把非效率的人味交给人；图书/内容做流量，培训/工作台做后端。",
+        shu: "AI主编、私域打标签、个性化回访、课程路径生成、企业工作台交付。",
+        qi: "AI主编、企业微信、知识库、公众号、AI工作台、数字员工、图书生产线。"
+      },
+      "AI App增长": {
+        dao: "AI产品首先还是产品。赛道错了，投放、设计、模型都救不回来。",
+        fa: "选品、测试、放大、迭代；用首次付费率、功能完成率、留存和订阅取消率判断生死。",
+        shu: "小额投放5天测试，保留ROI正向计划，扩关键词，做ASO/ASA循环。",
+        qi: "点点数据、ASA、ASO、信息流平台、订阅指标系统、素材优化工具。"
+      },
+      "社群问答": {
+        dao: "AI时代个体更需要圈子，因为项目、机会、信任和资源都在关系场里流动。",
+        fa: "用个人IP承接资源，用细分行业痛点做突破，用分佣和协作降低起步门槛。",
+        shu: "提问定位、老客户转介绍、内容输出、私域承接、先推荐产品再做自有产品。",
+        qi: "破局社群、公众号、视频号、微博、AI SEO、线下活动、训练营。"
+      }
+    };
 
     const cases = [
-      {
-        theme: '大会战略',
-        title: 'AI应用与商业创业交流讨论',
-        source: 'AI应用与商业创业交流讨论.md',
-        identity: 'AI应用、内容创作、投资学习与个人成长方向的交流型分享者，重点不在单一项目，而在AI时代普通人的认知和资源配置方式。',
-        result: '形成“AI共创内容 + 跨领域资源套用 + 人脉价值交换”的创业判断，强调AI不能替代人的价值观、判断力和资源整合。',
-        data: '提到海外传播场景中，95%的内容都可能触达目标用户；同时提醒不要轻信“单人无员工做到1000万”的极端叙事。',
-        story: 'AI降低知识获取门槛后，信息差不会消失，而是从“知道信息”转向“能否判断、能否套用、能否跨领域组合”。',
-        framework: '内容生产四步：兴趣和大众兴趣交集，AI共创反常观点，生成大纲，再延伸到内容生产、产品制造和商业承接。',
-        tools: 'AI共创工具、海外内容平台、社群资源、人脉网络、个人知识整理系统。',
-        quote: '“AI无法替代人的价值观、判断力。”“信息差会越来越大。”“你对他有价值，那他才有用。”',
-      },
-      {
-        theme: 'PPT设计变现',
-        title: '普通人从零基础用AI做PPT变现到团队百万营收',
-        source: '普通人从零基础用AI做PPT变现到团队百万营收.md',
-        identity: '关云，零基础PPT设计创业者，早年做过空降兵、工地和助理，从AI写作转向AI+PPT可视化交付。',
-        result: '从个人单干月入3到4万的上限，放大到20人全职团队、1000+线上设计师、月接1000多单，并跑出团队百万营收。',
-        data: '首个商单3万元；整体跑通率约50%-60%；女友第一个月1万元，母亲月入四五千；一觉醒来小红书有100个咨询。',
-        story: '没有设计和PPT基础，靠AI降低技能门槛切入PPT代做，再通过合伙人、天使投资和团队机制，把个体交付变成组织化生意。',
-        framework: 'AI做PPT四步：需求理解、大纲生成、内容填充、人工优化；业务放大拆成获客、销转、交付三段。',
-        tools: 'PPT工具、AI生成工具、个人/团队知识库、小红书、闲鱼、抖音、派单系统。',
-        quote: '“胆子大，好像其实比会更重要。”“审美是AI时代的护城河。”“想都是问题，做才是答案。”',
-      },
-      {
-        theme: '商业模式',
-        title: '狗哥带货完整整理稿',
-        source: '狗哥-带货分享-完整整理稿.md',
-        identity: '狗哥，小学学历出身，做过木匠、电子厂、淘宝客、社群产品、公众号IP和投资实盘的连续创业者。',
-        result: '淘宝客阶段赚过1000多万，社群产品做到1.5万会员，公众号做到10万粉，跨境电商新盘子半年跑到月利润70万。',
-        data: '跨境项目曾出现单日6000单，一单2元约日入1.2万；培训、工具、供应链等板块各贡献二三十万，构成月入百万结构。',
-        story: '主题是“月入两万项目如何升级为月入百万商业模式”：同一个项目，换商业模式之后，天花板完全不同。',
-        framework: '好商业模式四指标：持续抽成、无限规模延展、复利结构、控制交易入口；再叠加赛道天花板和业务空间判断。',
-        tools: '多级分销、供应链、跨境电商工具、社群培训、代理体系、工具服务费。',
-        quote: '“赚钱只是工具，赚时间才是目的。”“没有不好的项目，只有不好的商业模式。”',
-      },
-      {
-        theme: '一人公司',
-        title: '地产人AI转型：45岁裁员后搭建AI智能体',
-        source: '地产人AI转型分享：45岁裁员后用AI智能体搭建.md',
-        identity: '地产与建筑行业转型者，包含拥有20年商业综合体经验的赵老师，以及林杰老师的AI第二大脑/一人公司系统案例。',
-        result: '从45岁被裁、47份简历零回复，到15天完成AI产品，并通过OpenCloud相关产品获得5000元收益，进一步搭建公众号与私域智能体系统。',
-        data: '20年经验曾能为公司节省300万却被简历筛掉；产品打磨消耗约40亿token；7个智能体；一周卖出73份订阅。',
-        story: '传统行业经验在招聘市场可能不值钱，但被产品化、知识库化、智能体化之后，就能从履历变成可售卖系统。',
-        framework: '一人公司三步：道是技能资本，装是自动化系统，卖是获客变现；自由职业卖时间，一人公司卖可复用系统。',
-        tools: 'OpenCloud/QCloud、GPT-4 Pro、飞书、多智能体、公众号写作系统、视频系统、个人传记skill、本地知识库。',
-        quote: '“经验不值钱，经过产品化的经验才值钱。”“你20年对行业的判断，是AI唯独不能替代的东西。”',
-      },
-      {
-        theme: 'AI编程出海',
-        title: 'L3时代AI编程出海创业分享',
-        source: 'L3时代AI编程出海创业分享与经验交流.md',
-        identity: 'AI编程出海创业者，原本做技术施工，知乎1万粉但未变现，加入破局行动家后确定AI编程为核心方向。',
-        result: '从焦虑中的技术从业者，转向AI编程出海赛道，并在次年成为线下分享嘉宾，形成产品、IP和课程两条业务线。',
-        data: 'AI编程出海被判断至少还有约2年窗口；个人时间仍是24小时，但Agent可以7×24小时运行；每月200美元GPT额度被认为已足够多数业务。',
-        story: 'L3时代的变化是从人机协作变成管理多个Agent，人不再亲手写每一行代码，而是提高决策密度和业务理解深度。',
-        framework: 'L0到L3编程演进、ESBI四象限、AI产品PRD流程、出海需求选择、决策能力训练。核心不是写代码，而是定义需求和调试系统。',
-        tools: 'Hermit、龙虾、多Agent、Google Trends、关键词难度和CPC数据、搜索引擎、国内合规模型。',
-        quote: '“只有少才能跑出来，少就是多。”“现在L3时代，AI编程已经不是更好的工具，它是新的生产单元。”',
-      },
-      {
-        theme: '教育改造',
-        title: 'AI时代人类的生存与发展',
-        source: 'AI时代人类的生存与发展：从商业教育到能力.md',
-        identity: '在线数字化技能教育平台负责人，平台累计服务大量数字技能学习用户，长期研究AI时代人与企业的定位。',
-        result: '平台从编程教育自然转向AI教育，并通过AI模仿内容账号、AI分身会议协作等实验验证人的审美与好奇心价值。',
-        data: '平台累计约1400万学员，ChatGPT前核心课程拥有全球500万用户；AI模仿赵老师内容账号两个月获得13万粉丝。',
-        story: '主讲人逐一拆解协作共生、规律发展、监管保护、文明替代四类主流认知，指出它们都忽略了“需求端创造”这个AI时代核心问题。',
-        framework: 'AI时代能力转向审美与好奇心：审美负责判断和选择AI输出，好奇心负责探索新需求；行动逻辑从以力做工转为以意做工。',
-        tools: 'AI内容分身、用户数据上传、线上会议协作、AI教育产品、数字技能学习平台。',
-        quote: '“需求需要被爆发，而不是供给需要被爆发。”“AI时代核心要从以力做工转向以意做工。”',
-      },
-      {
-        theme: '大会战略',
-        title: 'AI驱动重塑传统行业的创业分享',
-        source: 'AI驱动重塑传统行业的创业分享.md',
-        identity: '李立克，25年互联网行业经验的创业者与AI投资人，曾做站长工具并出售给腾讯，近三年投资AI创业公司。',
-        result: '累计投资近60家AI创业公司，部分被投公司达到几亿美金年收入，并持续寻找能用AI重构传统行业的创业者。',
-        data: '全球日均token消耗从去年年初到今年增长约1400倍；IDC预测到2030年token消耗增长三亿倍；东南亚AI电商团队30人从800万做到4000万营收。',
-        story: 'AI和互联网不同：互联网链接信息，AI直接重构行业结果交付，会消灭中间层，从鱼头做到鱼尾。',
-        framework: '面向全球市场做全闭环业务，掌握连续用户数据，形成数据飞轮，用关键技术改造行业，而不是做平台附庸。',
-        tools: 'Llama生态、国产大模型、token服务、AI机器人、智能硬件、Kickstarter、全球供应链。',
-        quote: '“互联网只是链接，AI是直接重构整个行业的价值链。”“不要做任何平台的附庸。”',
-      },
-      {
-        theme: '大会战略',
-        title: '李尚龙：AI时代创业与个人发展',
-        source: 'AI时代创业与个人发展李尚龙分享.md',
-        identity: '李尚龙，拥有多年广东创业经历和内容账号经验的创业者，分享AI时代个人创业、做号和轻公司策略。',
-        result: '用AI工具验证单人运营模式，曾单天卖出4万元产品，并通过内容账号和高端资源链接获得后续项目机会。',
-        data: '传统内容账号至少需要20人团队；项目最多留3个月观察期；付费AI即使2000美元/月，也可能比雇一个低价员工更划算。',
-        story: '分享者从对新技术的排斥历史讲起，提醒有资历的人要烧掉骄傲，用归零心态进入新行业。',
-        framework: '三条方法论：先变现再扩张，把公司做轻，用好付费AI工具；同时远离撒播式创业，聚焦一个点做深。',
-        tools: '付费AI总结服务、内容账号、AI辅助复盘、线下资源活动、二级市场认知资源。',
-        quote: '“不要空谈AI一定能改变世界，要先落地商业价值。”“把公司变轻，把人变少，最好是一个人。”',
-      },
-      {
-        theme: 'AI编程出海',
-        title: 'AI编程出海：25个AI员工打造一人公司',
-        source: 'AI编程出海：用25个AI员工打造一人公司自动化.md',
-        identity: '孟建，10年程序员经历，曾任职三家顶级互联网大厂，2024年加入破局行动家后创业。',
-        result: '加入破局后两三个月出版百万畅销书，离开大厂后用AI员工组织架构探索AI编程出海一人公司。',
-        data: '25个AI员工；两个各14名成员的AI分组；三层架构；需求挖掘skill包含10个Python脚本。',
-        story: '百万畅销书只是起点，真正目标是用AI员工叠加劳动力、代码、媒体、资本四类杠杆，把S象限的个体变成B象限的系统。',
-        framework: '四类杠杆 + ESBI四象限 + AI员工三层架构 + 产品开发八工序：需求、分析、合规、文案、设计、前端、后端、运营。',
-        tools: 'OpenCloud/Openclaw、Claude、Stitch、Skills、GDPR/CPRA合规模板、产品经理/SEO/法务/运营Agent。',
-        quote: '“知识库属于第二大脑，但第一大脑谁也拿不走。”“最好的入局时间，要么是10年前，要么是现在。”',
-      },
-      {
-        theme: '大会战略',
-        title: 'AI重塑行业机遇与创业讨论',
-        source: 'AI重塑行业机遇分享与创业讨论.md',
-        identity: '李立克，浙大AI创新中心相关嘉宾、AI投资人，长期关注AI重塑传统行业和全球化机会。',
-        result: '累计投资超过60家AI项目，布局国内、硅谷、东京、悉尼、东南亚等市场，并开放对接真正解决行业需求的项目。',
-        data: '投资的超算服务公司去年4月注册，到年底年收入突破1亿元，今年预计2-3亿元；AI产品卖到欧美可获得数倍利润空间。',
-        story: '从Llama开源讲到中国大模型创业，再讲到特斯拉和拼多多，核心是AI会重塑生产环节和价值分配，不只是改造信息流。',
-        framework: 'AI创业要做全流程改造、独立闭环、数据反馈循环；创意、团队、执行三者缺一不可。',
-        tools: '超算服务、AI推理服务、国产模型、AI电商团队、机器人改造、数据飞轮。',
-        quote: '“互联网只是工具，AI是改造整个社会的。”“一定要以用户体验为原点。”',
-      },
-      {
-        theme: '教育改造',
-        title: '水龙：千万级教育业务AI改造实践',
-        source: 'AI时代千万级教育业务改造实践分享.md',
-        identity: '水龙，14年互联网创业与教育行业经验，曾出版百万册行业书，经营年收入千万级教育业务。',
-        result: '2023年裁撤原三四十人团队、退办公室，把教育业务压缩到极简团队，并启动内容、私域、产品三端AI改造。',
-        data: 'AI社群中只有10%-15%用户积极拥抱AI；传统知识IP教育业务年运营成本100-200万；AI协作后15-20分钟可产出一篇深度内容；300多位用户参与测试。',
-        story: '教育行业最先被标准化知识替代冲击，但也因此暴露出新的价值：激发动力、深度连接、人文互动和个性化成长。',
-        framework: '核心心法是“把效率的还给效率，把非效率的还给非效率”；内容端、私域端、产品端分别AI化。',
-        tools: 'AI主编、公众号内容生产、企业微信自动标签、AI深度咨询、个人文章知识库、个性化学习路径系统。',
-        quote: '“把效率的还给效率，把非效率的还给非效率。”“认知一半是认，另一半是知。”',
-      },
-      {
-        theme: 'PPT设计变现',
-        title: '关云：AI时代普通人做PPT设计变现',
-        source: '关云：AI时代普通人做PPT设计变现的创业分享.md',
-        identity: '关云，于学AI创始人，底层经历丰富，设计、PPT、美术零基础，通过AI+PPT切入可视化传达生意。',
-        result: '从5-6人大厅创业，到海口20人团队；学员季伟做到月均4万元；行动营新人可从小单交付开始成长。',
-        data: '女友第一个月做AI项目赚5万元；母亲每月四五千；20页PPT可压缩到约2.5小时交付；志愿者看旧手册两周赚2000元。',
-        story: 'AI写作放大存在合规风险，关云转向PPT，因为需求覆盖学生、职场人和高管，全年无淡季，下限和上限都更稳。',
-        framework: 'PPT四步：需求拆解、输出大纲、生成内容、人工收尾；放大路径：自然流验证，投流放大，横向多平台，纵向培训和孵化。',
-        tools: 'AI问答、PPT工具、小红书、闲鱼、淘宝、知识库、派单系统、优秀作品抄练库。',
-        quote: '“客户买的是对的结果，而不是更多的产能。”“破圈比学AI更重要。”',
-      },
-      {
-        theme: 'AI编程出海',
-        title: '孟建完整稿：25个AI员工的一人公司系统',
-        source: '孟建-用25个AI员工打造一人公司自动化系统-完.md',
-        identity: '孟建，程序员出身、10年大厂经历，2024年9月创业，破局行动家高客单成员。',
-        result: '创业半年左右，已完成AI编程出海相关知识库与产品团队、自媒体团队的AI员工架构，目标是一个人跑产品矩阵。',
-        data: '两个团队各14个AI成员；三层架构；需求skill含10个Python脚本；可沉淀成站点流程后一天复制多个站点。',
-        story: '这份是完整口语整理稿，更强调从普通程序员到一人公司创业者的心法：不是追求一键生成，而是把每个专业分工沉淀成可复用能力。',
-        framework: '产品团队分为产品经理、SEO专家、项目经理、商业分析师、法律顾问、交互设计师等；完整工序覆盖需求到运营。',
-        tools: 'Openclaw、Claude/Hermes、Skills、Stitch、SEO/GEO/AIO文案流程、出海合规文件。',
-        quote: '“如果真这么简单，这波红利跟你也没关系了。”“红利往往就是少数人才能吃到的。”',
-      },
-      {
-        theme: 'AI编程出海',
-        title: '基于多Agent的网站运营自动化',
-        source: '基于多Agent的网站运营自动化落地实操分享.md',
-        identity: '前大厂普通员工，离职后加入破局社群，与杨哥、孟坚合作，负责出海网站运营自动化实操。',
-        result: '搭建多Agent网站运营系统，用于出海自然流、Reddit养号、X热点采集、自媒体运营和领航计划运营阶段交付。',
-        data: '网站开发运营拆成10个动作，95%的工作可由AI完成；Reddit每天早晚各跑1次任务；X一万粉商业价值约等于公众号五万粉。',
-        story: '从“单点聊天工具”转向“AI团队”：用户不直接指挥所有小角色，只和大总管沟通，让系统自动调度。',
-        framework: '10步网站运营：找需求、判断关键词、搜索意图、定位、PRD、设计、开发、上线、测试验收、运营启动、数据复盘。',
-        tools: 'OpenCloud、爱马仕、腾讯云海外节点、NC远控、Reddit、X、第三方MCP、SEO运营群。',
-        quote: '“未来最强的不是会用一个AI，而是把AI组织成生产系统的人。”',
-      },
-      {
-        theme: '社群问答',
-        title: 'AI破局俱乐部线下大会问答与成员成长',
-        source: 'AI破局俱乐部线下大会提问与成员成长分享.md',
-        identity: '杨哥及破局社群成员问答场，覆盖传统资源创业者、童装供应链、AI教练、大学生IP、社群学员案例。',
-        result: '多位成员展示转型结果：熊志AI SEO年收入七位数，大宋带300位学员，翠姐拼豆半年60家门店并获融资，安娜AI带货月入六位数。',
-        data: '破局会员6月13日拟涨至2399元；推荐分佣最高40%；大仓在深圳组织20多场线下活动。',
-        story: '这场不是单一嘉宾演讲，而是破局社群的案例墙：普通人从不同起点进入AI赛道，通过项目、人脉、工具和圈子完成跃迁。',
-        framework: '问答中反复出现三类路径：个人IP承接资源、聚焦细分行业刚需、先做流量和分佣再做自有产品。',
-        tools: '个人IP、公众号、微博、视频号、AI SEO、AI写作工作室、线下活动、破局训练营。',
-        quote: '“什么拯救了你，然后你就用什么来回报世界。”“AI时代，选择一个好的圈子是非常重要的。”',
-      },
-      {
-        theme: '商业模式',
-        title: '狗哥：月入两万项目升级为月入百万',
-        source: '狗哥炸裂分享：月入两万项目升级为月入百万.md',
-        identity: '暴走狗哥，普通人创业代表，小学学历，十年创业，做过淘宝客、社群、公众号、出书和投资实盘。',
-        result: '把一个原本个人月入几万的跨境电商项目，重构为培训、工具、供应链、分销组合，半年做到月利润70万并冲击月入百万。',
-        data: '项目4月单日推单6000单；工具板块每月稳定二三十万利润；认养一亩茶两三人团队做到年利润千万级；好省/美逛年GMV数百亿。',
-        story: '同一个项目，小做是高级打工，重构成持续抽成、可复制、有复利、有空间的商业模式，才会越做越轻。',
-        framework: '三大核心指标：持续抽成、无限延展、复利结构；再看赛道天花板和业务空间，最后设计让外部伙伴参与分蛋糕。',
-        tools: '跨境电商工具、供应链分佣、培训获客、代理分销、私域用户、内容IP。',
-        quote: '“好的生意一定越做越轻松，垃圾的生意一定越做越累。”“创业的目的是为了不创业。”',
-      },
-      {
-        theme: '教育改造',
-        title: '秋叶杭州线下会：AI生态位与爆品生意经',
-        source: '秋叶杭州线下会分享：AI时代的生态位选择与.md',
-        identity: '秋叶，AI图书与企业培训领域创业者，长期从PPT培训、图书出版、企业AI培训中寻找稳定现金流生态位。',
-        result: '2025年第一季度获得300万营收，一年至少完成1200场线下AI培训，AI图书累计20本中打出2本爆品。',
-        data: '爆品图书分别卖出110万册、150万册；AI热点图书生命周期约45天；数字员工月成本目标约3000元。',
-        story: '秋叶不追逐“AI是什么”，只追问“谁给钱”。用图书做流量入口，用AI培训和企业工作台做后端承接。',
-        framework: '爆品图书四要素：强IP、好选题、靠谱中盘、踩中时间点；市场不可预测时，用批量试错创造确定性。',
-        tools: 'AI写书流程、豆包、DeepSeek、文心一言、企业AI工作台、AI编程工具包、人货场文章工具、数字员工。',
-        quote: '“我根本就不关心AI是什么，我只关心谁给我钱。”“快是唯一赢的法。”',
-      },
-      {
-        theme: '一人公司',
-        title: '林杰：一人公司AI自动化生产系统',
-        source: '林杰一人公司-AI自动化生产系统线下分享与实.md',
-        identity: '林杰，AI第二大脑与一人公司系统实践者，原传统行业背景，离职后全职打造个人AI助手系统。',
-        result: '搭建AI第二大脑系统，用于内容创作、团队管理、人才招聘、任务跟踪、战略决策和个人IP定位。',
-        data: '系统可让一个人达到过去3-5人的效率；支持最多约10个窗口并行任务；个人自传技能可生成约2万字完整人生经历；OpenAI包月约700多元。',
-        story: '从童年想要哆啦A梦，到把GPT变成个人AI助手。系统的核心不是炫技，而是让普通人拥有可持续生产内容和决策的第二大脑。',
-        framework: 'SOP未来是写给AI看的；技能是生产线，知识库是记忆，交互模式用于练脑，全自动模式用于高频执行。',
-        tools: '龙虾、QQ Cloud、飞书机器人、本地知识库、OpenAI模型、视频生成插件、个人自传技能。',
-        quote: '“AI就是我们这个时代的哆啦A梦。”“未来SOP的阅读对象是AI，不是人。”',
-      },
-      {
-        theme: 'AI编程出海',
-        title: '个人开发者AI编程打造语言学习平台',
-        source: '个人开发者AI编程打造语言学习平台的从0到1.md',
-        identity: '离职程序员与个人开发者，从AI编程切入语言学习资料库SaaS，主打AI自媒体+平台产品。',
-        result: '今年1月上线语言学习平台，运营3个多月累计销售额超过2万元，注册用户3500个，每月新增约1000个。',
-        data: '黑客松作品获第四名；竞品在小红书卖出9000多份；自营收入约1.8万，平台入驻相关收入6万多；B端投放150-200元卖一单年费即可回本。',
-        story: '从英语口语黑客松项目，到公众号文章带来小红书英语博主付费需求，再把一次性定制开发升级成可复用平台。',
-        framework: 'AI开发九步：竞品分析、需求文档、高保真原型、数据库设计、后端、接口文档、前端、测试修复、上线。',
-        tools: 'Go语言、GPT Plus、高阶模型、context high模式、docs目录、香港服务器、小红书、微信私域。',
-        quote: '“平台级产品不一定是热点词，但一定是长期需求。”“需求文档写得越细，AI交付质量越高。”',
-      },
-      {
-        theme: 'AI App增长',
-        title: 'AI App增长方法论与商业化实践',
-        source: '破壁俱乐部AI应用分享：AI APP增长方法论与商.md',
-        identity: 'AI工具类应用增长与商业化分享者，关注开发者从Demo到增长、投放、变现的全流程。',
-        result: '透露即将联合拓普推出AI开发者加速器，已有合作项目月流水三四十万人民币，目标做到单项目月流水百万级。',
-        data: '2025年中国区苹果商店AI工具类收入约35-40亿美金，美国工具赛道约100亿美金；首次付费率需10%以上，功能完成率大于45%，次日留存大于15%。',
-        story: '多数开发者会做Demo但不会增长，真正卡点不是模型，而是赛道、投放、数据指标和商业化闭环。',
-        framework: 'AI产品增长四步：选品、测试、放大、迭代优化；信息流投放四步：小规模测试、筛选优化、饱和投放、动态管理。',
-        tools: '点点数据、ASA、ASO、信息流投放平台、应用商店付费榜、AI素材优化工具、订阅指标系统。',
-        quote: '“如果赛道错了，后边所有东西都白费。”“AI产品本质上还是产品，用户价值才是根本。”',
-      },
-      {
-        theme: '教育改造',
-        title: '秋叶：AI图书与培训行业创业分享',
-        source: 'AI创业者嘉年华：秋叶关于AI图书与培训行业.md',
-        identity: '托尔丹斯基，也就是秋叶，AI数字化转型、AI图书、AI企业培训方向创业者，相关作品累计销量约300万册。',
-        result: '一年至少1200场线下培训，团队老师多为普通本科背景，却拿到500强企业和985高校培训机会。',
-        data: '两本AI爆款图书分别约110万册、150万册；8人团队数月产出多本书；未来标准化岗位能力包计划按每月约3000元卖给企业。',
-        story: '图书本身不一定赚钱，但能带来影响力；真正要靠后端AI培训、企业工作台和标准化岗位能力包承接。',
-        framework: '商业三问：谁给你钱，谁稳定给你钱，为什么稳定给你钱；不要从AI出发找业务，要从甲方需求出发找未被满足的问题。',
-        tools: 'AI图书生产线、AI编程创意工作台、数字分身、人货场数据、企业AI工作台、豆包热点打法。',
-        quote: '“AI只是帮你建立更强竞争力的工具。”“未来最有价值的工作，是把可复制的标准化岗位能力卖给行业。”',
-      },
-      {
-        theme: '大会战略',
-        title: '洋哥：杭州AI破局大会开场演讲',
-        source: '杭州AI破局大会洋哥主题演讲：过去成果复盘.md',
-        identity: '洋哥，破局平台主理人，开场复盘过去三年AI在线商业教育成果，并发布2026年规划与新产品。',
-        result: '破局累计新学员突破7万人，平台内容达1.5亿字，服务好评超过1500人，全年实战参与人次5万以上。',
-        data: '2025年800个UGC线下布局，2026年目标2000次；全国活跃主理人200+；破局行动+交付273次辅导，500个一对一定制辅导；2026年至少投10家AI创新项目。',
-        story: '这场是整场大会的战略底座：AI带来重新发牌，普通人的核心机会不是基建层，而是应用层用AI更快拿结果。',
-        framework: 'AI机会三层：基建层、科创平台层、应用层；AI能力七级：提问、调试、知识库、流程、编程、商业模式、制定规则。',
-        tools: '央格、南哥AI问答、AI推广、AI助手、官网3.5、AI小龙虾自动化工作流。',
-        quote: '“红利源于未形成共识的趋势。”“AI应用层不是拼谁最懂底层，而是拼谁更会用AI达到结果。”',
-      },
-      {
-        theme: '一人公司',
-        title: '知识库加技能实现一人成军',
-        source: 'AI时代：知识库加技能实现一人成军.md',
-        identity: '知识库与skills系统实践者，围绕AI时代一人成军、内容产线、知识库飞轮和个人核心壁垒展开。',
-        result: '用知识库+skills模式7天完成原本一个月未必能做完的系统；2人团队搭建13条内容产线，支撑产品、手册和内容生产。',
-        data: '知识库分11个模块；知识库梳理5步；本次行动营2600多位学员获得内容创作skills；安装包把半天环境安装压缩到5分钟。',
-        story: 'AI生产模式从prompt到Agent再到skills。没有业务skills就用Agent，只是在“高速公路”上空跑，持续消耗token。',
-        framework: 'Skills三要素：可复用、能力、包；知识库五步：收集、清洗、归档、迭代、动态加载；一人公司三件套：Obsidian、Cloud Code、龙虾。',
-        tools: 'Obsidian、Cloud Code、龙虾、录音道、Get笔记、GPT、自动化内容产线、一键安装包。',
-        quote: '“AI时代，你只需要负责最有创造力的1%，剩下99%交给知识库和AI。”“没有货物的空跑，只是给大厂交token高速费。”',
-      },
-      {
-        theme: '商业模式',
-        title: 'AI电商破局与发展讨论',
-        source: 'AI电商破局与发展讨论.md',
-        identity: 'AI电商赛道团队内部讨论/短分享，围绕普通人入局、团队发展、AI产品底层视角和关系场复利展开。',
-        result: '给普通人20万结果的路径建议：跟随已经拿到结果的人直接进入项目，在实践中建立认知，而不是先听完理论再行动。',
-        data: '提出“三个项目中拿到一个成果”后要留出个人独立空间；团队目标是增长和影响力扩大两倍；强调数据资产和关系场两大复利。',
-        story: 'AI电商既会让一部分人因恐惧而回避，也会让一部分人被焦虑推着不停跑。真正可持续的参与方式，是边实操边保留身心节奏。',
-        framework: 'AI产品三视角：正确看待自己、正确看待AI、正确看待业务；团队两复利：数据资产复利、关系场复利。',
-        tools: 'AI电商项目、破局工具、数据资产、关系场、线下团队协作。',
-        quote: '“未来时代的学习，不会是PPT讲理论，而是直接进项目，直接上手开干。”“行业快速发展过程中，唯一需要注意的是身体。”',
-      },
-    ];
+      ["大会战略","AI应用与商业创业交流讨论","AI应用与商业创业交流讨论.md","AI应用、内容创作、投资学习与个人成长方向的交流型分享者。","形成“AI共创内容 + 跨领域资源套用 + 人脉价值交换”的创业判断。","海外传播场景中95%的内容都可能触达目标用户；提醒不要轻信单人无员工做到1000万的叙事。","AI降低知识获取门槛后，信息差从知道信息转向能否判断、套用和跨领域组合。","内容生产四步：兴趣交集、反常观点、大纲、商业承接。","AI共创工具、海外内容平台、社群资源、人脉网络、个人知识整理系统。","“AI无法替代人的价值观、判断力。”“信息差会越来越大。”"],
+      ["PPT设计变现","普通人从零基础用AI做PPT变现到团队百万营收","普通人从零基础用AI做PPT变现到团队百万营收.md","关云，零基础PPT设计创业者，从AI写作转向AI+PPT可视化交付。","从个人月入3到4万，放大到20人团队、1000+线上设计师、月接1000多单。","首个商单3万元；整体跑通率50%-60%；一觉醒来小红书100个咨询。","没有设计基础，靠AI降低技能门槛，再用团队机制把个体交付变成组织化生意。","AI做PPT四步：需求理解、大纲生成、内容填充、人工优化。","PPT工具、AI生成工具、知识库、小红书、闲鱼、抖音、派单系统。","“胆子大比会更重要。”“想都是问题，做才是答案。”"],
+      ["商业模式","狗哥带货完整整理稿","狗哥-带货分享-完整整理稿.md","狗哥，小学学历出身，做过淘宝客、社群产品、公众号IP和投资实盘。","淘宝客赚过1000多万，社群1.5万会员，跨境电商半年月利润70万。","跨境项目单日6000单；培训、工具、供应链等板块各贡献二三十万。","同一个项目，换商业模式之后，天花板完全不同。","持续抽成、无限延展、复利结构、控制交易入口。","多级分销、供应链、跨境电商工具、社群培训、代理体系。","“赚钱只是工具，赚时间才是目的。”"],
+      ["一人公司","地产人AI转型：45岁裁员后搭建AI智能体","地产人AI转型分享：45岁裁员后用AI智能体搭建.md","地产与建筑行业转型者，包含20年商业综合体经验的赵老师。","从45岁被裁、47份简历零回复，到15天完成AI产品并获得5000元收益。","20年经验曾能节省300万却被筛掉；40亿token；7个智能体；一周卖出73份订阅。","传统行业经验招聘市场不值钱，产品化后可以变成可售卖系统。","道是技能资本，装是自动化系统，卖是获客变现。","OpenCloud/QCloud、GPT-4 Pro、飞书、多智能体、个人传记skill。","“经验不值钱，产品化的经验才值钱。”"],
+      ["AI编程出海","L3时代AI编程出海创业分享","L3时代AI编程出海创业分享与经验交流.md","AI编程出海创业者，原做技术施工，知乎1万粉但未变现。","加入破局后确定AI编程为核心方向，形成产品、IP和课程两条业务线。","至少约2年窗口；Agent可7×24小时运行；每月200美元GPT额度够多数业务。","L3时代从人机协作变成管理多个Agent，提高决策密度和业务理解深度。","L0到L3演进、ESBI四象限、AI产品PRD、出海需求选择。","Hermit、龙虾、多Agent、Google Trends、关键词难度、CPC数据。","“AI编程已经不是更好的工具，它是新的生产单元。”"],
+      ["教育改造","AI时代人类的生存与发展","AI时代人类的生存与发展：从商业教育到能力.md","在线数字化技能教育平台负责人，长期研究AI时代人与企业定位。","平台从编程教育转向AI教育，用AI账号和AI分身验证审美与好奇心。","平台约1400万学员；ChatGPT前核心课程全球500万用户；AI账号两个月13万粉。","主流认知都忽略需求端创造，AI时代不是供给不足，而是需要创造新需求。","审美负责判断AI输出，好奇心负责探索新需求；以力做工转向以意做工。","AI内容分身、用户数据、线上会议协作、AI教育产品。","“需求需要被爆发，而不是供给需要被爆发。”"],
+      ["大会战略","AI驱动重塑传统行业的创业分享","AI驱动重塑传统行业的创业分享.md","李立克，25年互联网经验创业者与AI投资人。","累计投资近60家AI创业公司，部分被投达到几亿美金年收入。","全球日均token消耗增长约1400倍；东南亚AI电商30人从800万到4000万营收。","互联网链接信息，AI直接重构行业结果交付，会消灭中间层。","面向全球市场做全闭环业务，掌握连续用户数据，形成数据飞轮。","Llama生态、国产大模型、token服务、AI机器人、智能硬件、全球供应链。","“互联网只是链接，AI是直接重构行业价值链。”"],
+      ["大会战略","李尚龙：AI时代创业与个人发展","AI时代创业与个人发展李尚龙分享.md","李尚龙，多年广东创业经历和内容账号经验的创业者。","用AI验证单人运营模式，曾单天卖出4万元产品。","传统内容账号至少20人团队；项目最多留3个月观察期。","有资历的人要烧掉骄傲，用归零心态进入新行业。","先变现再扩张，把公司做轻，用好付费AI工具。","付费AI总结服务、内容账号、AI复盘、线下资源活动。","“把公司变轻，把人变少，最好是一个人。”"],
+      ["AI编程出海","AI编程出海：25个AI员工打造一人公司","AI编程出海：用25个AI员工打造一人公司自动化.md","孟建，10年程序员经历，曾任职三家顶级互联网大厂。","加入破局后两三个月出版百万畅销书，用AI员工探索一人公司。","25个AI员工；两个14人AI分组；三层架构；需求skill含10个Python脚本。","目标是用AI员工叠加劳动力、代码、媒体、资本四类杠杆。","四类杠杆 + ESBI四象限 + AI员工三层架构 + 产品八工序。","OpenCloud/Openclaw、Claude、Stitch、Skills、合规模板、运营Agent。","“最好的入局时间，要么是10年前，要么是现在。”"],
+      ["大会战略","AI重塑行业机遇与创业讨论","AI重塑行业机遇分享与创业讨论.md","李立克，AI投资人，关注AI重塑传统行业和全球化机会。","累计投资超过60家AI项目，开放对接真正解决行业需求的项目。","超算服务公司去年4月注册，到年底年收入破1亿元，今年预计2-3亿元。","从Llama开源到特斯拉和拼多多，核心是AI重塑生产环节和价值分配。","全流程改造、独立闭环、数据反馈循环；创意、团队、执行缺一不可。","超算服务、AI推理服务、国产模型、AI电商团队、机器人改造。","“互联网只是工具，AI是改造整个社会的。”"],
+      ["教育改造","水龙：千万级教育业务AI改造实践","AI时代千万级教育业务改造实践分享.md","水龙，14年互联网创业与教育行业经验，经营年收入千万级教育业务。","2023年裁撤三四十人团队，把教育业务压缩到极简团队并启动AI改造。","AI社群仅10%-15%积极拥抱AI；传统教育业务年成本100-200万；15-20分钟产出深度内容。","标准化知识被替代后，教育价值转向动力激发、深度连接和个性化成长。","把效率的还给效率，把非效率的还给非效率。","AI主编、公众号内容生产、企业微信标签、AI深度咨询、个性化学习路径。","“把效率的还给效率，把非效率的还给非效率。”"],
+      ["PPT设计变现","关云：AI时代普通人做PPT设计变现","关云：AI时代普通人做PPT设计变现的创业分享.md","关云，于学AI创始人，设计、PPT、美术零基础，通过AI切入可视化传达。","从5-6人大厅创业到海口20人团队；学员季伟月均4万元。","女友第一个月赚5万元；20页PPT约2.5小时交付；志愿者两周赚2000元。","AI写作有合规风险，PPT需求覆盖学生、职场人和高管，全年无淡季。","需求拆解、输出大纲、生成内容、人工收尾；自然流验证，投流放大。","AI问答、PPT工具、小红书、闲鱼、淘宝、知识库、派单系统。","“客户买的是对的结果，而不是更多的产能。”"],
+      ["AI编程出海","孟建完整稿：25个AI员工的一人公司系统","孟建-用25个AI员工打造一人公司自动化系统-完.md","孟建，程序员出身，2024年9月创业，破局行动家高客单成员。","完成AI编程出海知识库与产品团队、自媒体团队AI员工架构。","两个团队各14个AI成员；可沉淀流程后一天复制多个站点。","不是追求一键生成，而是把每个专业分工沉淀成可复用能力。","产品经理、SEO专家、项目经理、商业分析师、法律顾问等AI分工。","Openclaw、Claude/Hermes、Skills、Stitch、SEO/GEO/AIO流程。","“如果真这么简单，这波红利跟你也没关系了。”"],
+      ["AI编程出海","基于多Agent的网站运营自动化","基于多Agent的网站运营自动化落地实操分享.md","前大厂普通员工，负责出海网站运营自动化实操。","搭建多Agent网站运营系统，用于Reddit养号、X热点采集、自媒体运营。","网站开发运营拆成10个动作，95%的工作可由AI完成。","从单点聊天工具转向AI团队，用户只和大总管沟通。","找需求、关键词、搜索意图、定位、PRD、设计、开发、上线、测试、复盘。","OpenCloud、爱马仕、腾讯云海外节点、NC远控、Reddit、X、MCP。","“最强的不是会用一个AI，而是把AI组织成生产系统的人。”"],
+      ["社群问答","AI破局俱乐部线下大会问答与成员成长","AI破局俱乐部线下大会提问与成员成长分享.md","杨哥及破局社群成员问答场，覆盖多类普通人AI转型案例。","熊志AI SEO年收入七位数，大宋带300位学员，安娜AI带货月入六位数。","破局会员拟涨至2399元；推荐分佣最高40%；大仓深圳组织20多场线下活动。","这是破局社群案例墙：普通人通过项目、人脉、工具和圈子完成跃迁。","个人IP承接资源、聚焦细分行业刚需、先做流量和分佣再做自有产品。","个人IP、公众号、微博、视频号、AI SEO、AI写作工作室、线下活动。","“什么拯救了你，然后你就用什么来回报世界。”"],
+      ["商业模式","狗哥：月入两万项目升级为月入百万","狗哥炸裂分享：月入两万项目升级为月入百万.md","暴走狗哥，普通人创业代表，十年创业，做过淘宝客、社群、出书和投资实盘。","把个人月入几万跨境电商项目，重构成培训、工具、供应链、分销组合。","单日推单6000单；工具板块每月二三十万利润；认养一亩茶年利润千万级。","同一个项目，小做是高级打工，重构后才会越做越轻。","持续抽成、无限延展、复利结构、业务空间。","跨境电商工具、供应链分佣、培训获客、代理分销、私域用户。","“好的生意一定越做越轻松。”"],
+      ["教育改造","秋叶杭州线下会：AI生态位与爆品生意经","秋叶杭州线下会分享：AI时代的生态位选择与.md","秋叶，AI图书与企业培训领域创业者。","2025年Q1获得300万营收，一年至少1200场线下AI培训，20本AI图书打出2本爆品。","爆品图书110万册、150万册；AI热点图书生命周期约45天。","不追问AI是什么，只追问谁给钱，用图书做流量入口，用培训和工作台承接。","爆品四要素：强IP、好选题、靠谱中盘、踩中时间点。","AI写书流程、豆包、DeepSeek、文心一言、企业AI工作台、数字员工。","“我只关心谁给我钱。”“快是唯一赢的法。”"],
+      ["一人公司","林杰：一人公司AI自动化生产系统","林杰一人公司-AI自动化生产系统线下分享与实.md","林杰，AI第二大脑与一人公司系统实践者。","搭建AI第二大脑系统，用于内容创作、团队管理、招聘、任务跟踪和IP定位。","一个人达到过去3-5人的效率；最多约10个窗口并行；个人自传技能约2万字。","从童年想要哆啦A梦，到把GPT变成个人AI助手。","SOP未来写给AI；技能是生产线，知识库是记忆。","龙虾、QQ Cloud、飞书机器人、本地知识库、OpenAI模型、视频插件。","“AI就是我们这个时代的哆啦A梦。”"],
+      ["AI编程出海","个人开发者AI编程打造语言学习平台","个人开发者AI编程打造语言学习平台的从0到1.md","离职程序员与个人开发者，从AI编程切入语言学习资料库SaaS。","今年1月上线，运营3个多月销售额超过2万元，注册用户3500个。","黑客松第四名；竞品小红书卖出9000多份；B端投放150-200元卖一单年费即可回本。","从一次性定制开发升级成可复用平台。","竞品分析、需求文档、原型、数据库、后端、接口、前端、测试、上线。","Go、GPT Plus、高阶模型、context high、docs目录、香港服务器、小红书。","“平台级产品不一定是热点词，但一定是长期需求。”"],
+      ["AI App增长","AI App增长方法论与商业化实践","破壁俱乐部AI应用分享：AI APP增长方法论与商.md","AI工具类应用增长与商业化分享者。","即将联合拓普推出AI开发者加速器，已有项目月流水三四十万。","中国区AI工具类收入约35-40亿美金；美国工具赛道约100亿美金；首次付费率需10%以上。","多数开发者会做Demo但不会增长，真正卡点是赛道、投放、数据指标和商业闭环。","选品、测试、放大、迭代；小投放测试、筛选优化、饱和投放、动态管理。","点点数据、ASA、ASO、信息流平台、付费榜、订阅指标系统。","“如果赛道错了，后边所有东西都白费。”"],
+      ["教育改造","秋叶：AI图书与培训行业创业分享","AI创业者嘉年华：秋叶关于AI图书与培训行业.md","秋叶，AI数字化转型、AI图书、AI企业培训方向创业者。","一年至少1200场线下培训，团队普通本科背景也拿到500强和985高校机会。","作品累计销量约300万册；两本爆款约110万、150万册；岗位能力包计划每月约3000元卖企业。","图书带来影响力，真正靠AI培训、企业工作台和标准化岗位能力包承接。","商业三问：谁给钱，谁稳定给钱，为什么稳定给钱。","AI图书生产线、AI编程创意工作台、数字分身、人货场数据、企业AI工作台。","“不要从AI出发找业务，要从甲方需求出发。”"],
+      ["大会战略","洋哥：杭州AI破局大会开场演讲","杭州AI破局大会洋哥主题演讲：过去成果复盘.md","洋哥，破局平台主理人，复盘三年AI在线商业教育成果并发布2026规划。","破局累计新学员超7万人，平台内容1.5亿字，好评超1500人。","2025年800个UGC线下布局，2026目标2000次；破局行动+交付273次辅导。","AI重新发牌，普通人的核心机会不是基建层，而是应用层用AI更快拿结果。","AI机会三层；AI能力七级：提问、调试、知识库、流程、编程、商业模式、规则。","央格、南哥AI问答、AI推广、AI助手、官网3.5、AI小龙虾工作流。","“红利源于未形成共识的趋势。”"],
+      ["一人公司","知识库加技能实现一人成军","AI时代：知识库加技能实现一人成军.md","知识库与skills系统实践者，围绕一人成军、内容产线、知识库飞轮展开。","用知识库+skills模式7天完成原本一个月未必能做完的系统；2人团队搭建13条内容产线。","知识库11个模块；梳理5步；2600多位学员获得内容创作skills；安装包把半天压到5分钟。","没有业务skills就用Agent，只是在高速公路上空跑，持续消耗token。","Skills三要素：可复用、能力、包；知识库五步：收集、清洗、归档、迭代、动态加载。","Obsidian、Cloud Code、龙虾、录音道、Get笔记、GPT、一键安装包。","“只负责最有创造力的1%，剩下99%交给知识库和AI。”"],
+      ["商业模式","AI电商破局与发展讨论","AI电商破局与发展讨论.md","AI电商赛道团队内部短分享，围绕普通人入局和关系场复利。","给普通人20万结果的建议：跟随已拿结果的人直接进项目，在实践中建立认知。","三个项目中拿到一个成果后留出独立空间；团队目标增长和影响力扩大两倍。","AI电商会让人恐惧回避，也会让人被焦虑推着跑，关键是边实操边保留身心节奏。","三视角：正确看待自己、AI、业务；两复利：数据资产、关系场。","AI电商项目、破局工具、数据资产、关系场、线下团队协作。","“未来学习不是PPT讲理论，而是直接进项目开干。”"]
+    ].map((row) => {
+      const [theme, title, source, identity, result, data, story, framework, tools, quote] = row;
+      const pillars = pillarByTheme[theme];
+      return {
+        theme, title, source,
+        identity, result, data, story, framework, tools, quote,
+        score: themeScore[theme],
+        pillars,
+        action: actionForTheme(theme),
+        jc: jcForTheme(theme)
+      };
+    });
 
-    const categories = ['全部', ...Array.from(new Set(cases.map(item => item.theme)))];
-    let active = '全部';
-    let query = '';
+    function actionForTheme(theme) {
+      const map = {
+        "PPT设计变现": "今天找3个PPT需求样本，用AI拆需求并生成一版交付流程；本周跑一个小单或模拟订单。",
+        "AI编程出海": "今天写一个PRD，不写代码；本周做落地页或最小原型，验证关键词和真实需求。",
+        "一人公司": "今天整理个人经历和业务清单；本周把一个重复任务写成AI可执行SOP。",
+        "商业模式": "今天用持续抽成、延展、复利、空间四项重评自己的项目；本周改出一个可抽佣结构。",
+        "教育改造": "今天把现有内容分成效率部分和人味部分；本周做一个AI问答或个性化学习路径样机。",
+        "AI App增长": "今天查付费榜和关键词；本周做5天小额测试计划，不先堆功能。",
+        "社群问答": "今天写出自己的低谷故事和资源清单；本周找3个同频人做一次深聊。",
+        "大会战略": "今天选定一个应用层行业痛点；本周用AI做一版可展示的解决方案。"
+      };
+      return map[theme] || "今天先选一个最小动作，本周跑出可验证结果。";
+    }
+
+    function jcForTheme(theme) {
+      const map = {
+        "PPT设计变现": "锦成视角：这类内容适合转成“普通人AI代做地图”，用案例证明低门槛变现，而不是只讲工具。",
+        "AI编程出海": "锦成视角：不要把出海讲成技术课，要把它讲成需求判断、PRD和运营闭环课。",
+        "一人公司": "锦成视角：这是最适合沉淀成模板的部分，可以变成自己的知识库/skills产品线。",
+        "商业模式": "锦成视角：这里是最有传播力的商业判断，适合拆成短视频和私域成交话术。",
+        "教育改造": "锦成视角：把教育案例转成“内容资产+AI交付+人味连接”的产品框架。",
+        "AI App增长": "锦成视角：这部分可以变成开发者商业化清单，帮技术人补增长短板。",
+        "社群问答": "锦成视角：社群问答的价值在真实人群画像，适合做用户分层和私域转化素材。",
+        "大会战略": "锦成视角：这类内容负责定调，用来做开篇、总览和高认知引流。"
+      };
+      return map[theme] || "锦成视角：把内容转成自己的业务语言，再做公开输出。";
+    }
+
+    const categories = ["全部", ...Array.from(new Set(cases.map(item => item.theme)))];
+    let active = "全部";
+    let query = "";
 
     const escapeHtml = (value) => String(value)
-      .replaceAll('&', '&amp;')
-      .replaceAll('<', '&lt;')
-      .replaceAll('>', '&gt;')
-      .replaceAll('"', '&quot;')
-      .replaceAll("'", '&#039;');
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
 
-    function renderInsights() {
-      document.getElementById('insights').innerHTML = insights.map((item, index) => `
-        <article class="insight reveal" style="animation-delay:${index * 50}ms">
-          <i>${String(index + 1).padStart(2, '0')}</i>
+    function renderPipeline() {
+      document.getElementById("pipeline").innerHTML = pipeline.map(step => `
+        <div class="pipeline-step">
+          <b>${step[0]}</b>
+          <div><h3>${escapeHtml(step[1])}</h3><p>${escapeHtml(step[2])}</p></div>
+        </div>
+      `).join("");
+    }
+
+    function renderConnections() {
+      document.getElementById("connectionList").innerHTML = connections.map((item, index) => `
+        <article class="connection reveal" style="animation-delay:${index * 45}ms">
+          <i>${String(index + 1).padStart(2, "0")}</i>
           <h3>${escapeHtml(item[0])}</h3>
           <p>${escapeHtml(item[1])}</p>
         </article>
-      `).join('');
+      `).join("");
     }
 
-    function renderVisual() {
-      document.getElementById('visualStack').innerHTML = cases.slice(0, 12).map((item, index) => `
-        <div class="visual-row">
-          <b>${String(index + 1).padStart(2, '0')}</b>
-          <span>${escapeHtml(item.title)}</span>
-          <em>${escapeHtml(item.theme)}</em>
-        </div>
-      `).join('');
+    function renderGlobalActions() {
+      document.getElementById("globalActions").innerHTML = globalActions.map(item => `
+        <article class="action-card">
+          <h3>${escapeHtml(item[0])}</h3>
+          <ul>${item[1].map(action => `<li>${escapeHtml(action)}</li>`).join("")}</ul>
+        </article>
+      `).join("");
     }
 
     function renderFilters() {
-      document.getElementById('filters').innerHTML = categories.map(category => {
-        const count = category === '全部' ? cases.length : cases.filter(item => item.theme === category).length;
-        return `<button class="filter ${category === active ? 'is-active' : ''}" type="button" data-filter="${escapeHtml(category)}">${escapeHtml(category)} · ${count}</button>`;
-      }).join('');
+      document.getElementById("filters").innerHTML = categories.map(category => {
+        const count = category === "全部" ? cases.length : cases.filter(item => item.theme === category).length;
+        return `<button class="filter ${category === active ? "is-active" : ""}" type="button" data-filter="${escapeHtml(category)}">${escapeHtml(category)} · ${count}</button>`;
+      }).join("");
 
-      document.querySelectorAll('.filter').forEach(button => {
-        button.addEventListener('click', () => {
+      document.querySelectorAll(".filter").forEach(button => {
+        button.addEventListener("click", () => {
           active = button.dataset.filter;
           renderFilters();
           renderCases();
@@ -1159,46 +1162,79 @@
     }
 
     function matches(item) {
-      const themeMatch = active === '全部' || item.theme === active;
-      const haystack = Object.values(item).join(' ').toLowerCase();
-      return themeMatch && haystack.includes(query.trim().toLowerCase());
+      const themeMatch = active === "全部" || item.theme === active;
+      const text = Object.values(item).filter(v => typeof v === "string").join(" ").toLowerCase();
+      return themeMatch && text.includes(query.trim().toLowerCase());
+    }
+
+    function renderScore(score) {
+      return valueLabels.map(([key, label]) => `
+        <div class="score">
+          <h4>${escapeHtml(label)}</h4>
+          <div class="score-line"><span>短期</span><div class="bar"><i style="--score:${score[key][0]}"></i></div><b>${score[key][0]}</b></div>
+          <div class="score-line"><span>长期</span><div class="bar"><i style="--score:${score[key][1]}"></i></div><b>${score[key][1]}</b></div>
+        </div>
+      `).join("");
     }
 
     function renderCases() {
       const list = cases.filter(matches);
-      const container = document.getElementById('caseList');
-      document.getElementById('emptyState').style.display = list.length ? 'none' : 'block';
-      container.innerHTML = list.map((item, index) => `
-        <article class="case-card reveal" style="animation-delay:${Math.min(index, 8) * 45}ms">
-          <header class="case-top">
+      document.getElementById("emptyState").style.display = list.length ? "none" : "block";
+      document.getElementById("caseList").innerHTML = list.map((item, index) => `
+        <article class="case reveal" style="animation-delay:${Math.min(index, 8) * 35}ms">
+          <header class="case-head">
             <div>
-              <div class="case-index"><b>${String(index + 1).padStart(2, '0')}</b><span>${escapeHtml(item.source)}</span></div>
+              <div class="case-index"><b>${String(index + 1).padStart(2, "0")}</b><span>${escapeHtml(item.source)}</span></div>
               <h3 class="case-title">${escapeHtml(item.title)}</h3>
             </div>
-            <div class="case-meta">
-              <span class="theme-badge">${escapeHtml(item.theme)}</span>
-              <span>TERMINOLOGY-DAO CARD</span>
+            <div class="case-side">
+              <span class="badge">${escapeHtml(item.theme)}</span>
+              <span>钱 / 关系 / 技能 / 影响力</span>
             </div>
           </header>
-          <div class="field-grid">
+
+          <section class="worth" aria-label="价值评分">
+            ${renderScore(item.score)}
+          </section>
+
+          <section class="extract" aria-label="七字段抽取">
             ${fields.map(([key, label]) => `
-              <section class="field">
+              <div class="extract-cell">
                 <h4>${escapeHtml(label)}</h4>
                 <p>${escapeHtml(item[key])}</p>
-              </section>
-            `).join('')}
-          </div>
+              </div>
+            `).join("")}
+          </section>
+
+          <section class="pillars" aria-label="道法术器">
+            ${["道","法","术","器"].map((key) => {
+              const map = { "道": "dao", "法": "fa", "术": "shu", "器": "qi" };
+              return `<div class="pillar" data-key="${key}"><h4>${key}</h4><p>${escapeHtml(item.pillars[map[key]])}</p></div>`;
+            }).join("")}
+          </section>
+
+          <section class="case-bottom">
+            <div class="mini-action">
+              <h4>行动清单</h4>
+              <p>${escapeHtml(item.action)}</p>
+            </div>
+            <div class="jc-view">
+              <h4>锦成视角</h4>
+              <p>${escapeHtml(item.jc)}</p>
+            </div>
+          </section>
         </article>
-      `).join('');
+      `).join("");
     }
 
-    document.getElementById('searchInput').addEventListener('input', (event) => {
+    document.getElementById("searchInput").addEventListener("input", (event) => {
       query = event.target.value;
       renderCases();
     });
 
-    renderInsights();
-    renderVisual();
+    renderPipeline();
+    renderConnections();
+    renderGlobalActions();
     renderFilters();
     renderCases();
   </script>
