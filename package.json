@@ -1,0 +1,10 @@
+{
+  "name": "poju-breakdown-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static GitHub Pages build pipeline for AI破局大会拆解站.",
+  "scripts": {
+    "build": "node scripts/build-site.mjs",
+    "validate": "node scripts/build-site.mjs --validate && node scripts/validate-site.mjs"
+  }
+}

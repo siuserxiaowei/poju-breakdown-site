@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="__LANG__">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>__SITE_TITLE__</title>
+  <meta name="description" content="__SITE_DESCRIPTION__" />
+  <meta property="og:title" content="__OG_TITLE__" />
+  <meta property="og:description" content="__OG_DESCRIPTION__" />
+  <meta property="og:type" content="website" />
+  <meta name="generator" content="scripts/build-site.mjs" />
+  <style>
+__CSS__
+  </style>
+</head>
+<body>
+  <div class="site" data-build-time="__BUILD_TIME__">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#top" aria-label="返回顶部">
+          <span class="brand-mark" data-site-brand-mark>道</span>
+          <span data-site-brand>破局拆解</span>
+        </a>
+        <nav class="nav" aria-label="主导航" data-site-nav>
+          <a href="#method">固定套路</a>
+          <a href="#connections">隐藏连接</a>
+          <a href="#actions">行动清单</a>
+          <a href="#cases">案例拆解</a>
+          <a href="#wechat">微信</a>
+        </nav>
+        <a class="wechat-pill" href="#wechat" data-wechat-pill>微信号待填写</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="method" aria-labelledby="hero-title">
+        <div class="hero-main">
+          <p class="kicker" data-hero-kicker>Dao · Fa · Shu · Qi / Terminology Dao Archive</p>
+          <h1 id="hero-title" data-hero-title>__SITE_TITLE__</h1>
+          <p class="hero-copy" data-hero-copy>__SITE_DESCRIPTION__</p>
+          <div class="hero-actions" data-hero-actions>
+            <a href="#cases">看案例拆解</a>
+            <a href="#connections">看大会主线</a>
+          </div>
+        </div>
+
+        <aside class="method-panel" aria-labelledby="method-title">
+          <p class="kicker" data-method-kicker>Fixed Routine</p>
+          <h2 id="method-title" data-method-title>会议纪要不是摘要，是一套可复用的判断系统。</h2>
+          <div id="pipeline" data-pipeline></div>
+        </aside>
+      </section>
+
+      <section class="stats" aria-label="统计信息" data-stats></section>
+
+      <section class="section" id="connections" aria-labelledby="connections-title">
+        <div class="section-head">
+          <p class="kicker" data-connections-kicker>Conference Level Thread</p>
+          <h2 id="connections-title" data-connections-title>跨内容隐藏连接：这场大会真正反复说的事。</h2>
+        </div>
+        <div class="connections" id="connectionList" data-connections></div>
+      </section>
+
+      <section class="section" id="actions" aria-labelledby="actions-title">
+        <div class="section-head">
+          <p class="kicker" data-actions-kicker>Action List</p>
+          <h2 id="actions-title" data-actions-title>不再只是看热闹，直接拆成今天、本周、本月。</h2>
+        </div>
+        <div class="action-grid" id="globalActions" data-global-actions></div>
+      </section>
+
+      <section class="section" id="view" aria-labelledby="view-title">
+        <div class="section-head">
+          <p class="kicker" data-view-kicker>Jincheng View</p>
+          <h2 id="view-title" data-view-title>锦成视角：把大会内容转译成自己的业务动作。</h2>
+        </div>
+        <div class="action-card" data-view-card></div>
+      </section>
+
+      <section class="section" aria-labelledby="case-heading">
+        <div class="section-head">
+          <p class="kicker" data-cases-kicker>Case Cards</p>
+          <h2 id="case-heading" data-cases-title>逐篇进入道法术器。</h2>
+        </div>
+      </section>
+
+      <div class="toolbar" id="cases">
+        <div class="toolbar-inner">
+          <input class="search" id="searchInput" type="search" placeholder="搜索案例、主题、工具或金句..." aria-label="搜索案例" />
+          <div class="filters" id="filters" aria-label="主题筛选" data-filters></div>
+        </div>
+      </div>
+
+      <section class="cases" id="caseList" aria-live="polite" data-case-list></section>
+      <div class="empty" id="emptyState" data-empty-state>没有匹配结果，换个关键词试试。</div>
+
+      <section class="lead" id="wechat" aria-labelledby="wechat-title">
+        <div class="lead-card" data-lead-card>
+          <div>
+            <p class="kicker" data-lead-kicker>Private Flow</p>
+            <h2 id="wechat-title" data-lead-title>要后续 Markdown 转换、网页源码、术语道模板，加微信。</h2>
+            <p data-lead-copy>这里先保留引流位。填入准确微信号后，构建脚本会生成可直接托管的静态页。</p>
+          </div>
+          <div class="wechat-box">
+            <span>WeChat</span>
+            <strong data-wechat-value>微信号待填写</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner" data-footer>
+        <span>__SITE_TITLE__</span>
+        <span>Built from data JSON · GitHub Pages</span>
+      </div>
+    </footer>
+  </div>
+
+  <noscript>
+    <p>这个页面需要浏览器启用 JavaScript 来渲染案例筛选和卡片内容。</p>
+  </noscript>
+
+  <script id="site-data" type="application/json">__SITE_DATA__</script>
+  <script>
+    window.POJU_SITE_DATA = JSON.parse(document.getElementById("site-data").textContent);
+    window.SITE_DATA = window.POJU_SITE_DATA;
+  </script>
+  <script>
+__JS__
+  </script>
+</body>
+</html>
