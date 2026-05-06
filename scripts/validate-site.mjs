@@ -29,7 +29,7 @@ const ROUTINE_KEYWORDS = [
 const SECTION_CHECKS = [
   { label: "隐藏连接", tokens: ["隐藏连接", "跨内容隐藏连接", "connectionList", "connections"] },
   { label: "行动清单", tokens: ["行动清单", "Action List", "globalActions", "mini-action"] },
-  { label: "锦成视角", tokens: ["锦成视角", "Jincheng View", "jc-view"] },
+  { label: "业务转译", tokens: ["业务转译", "businessTranslation", "jc-view"] },
   { label: "微信引流位", tokens: ["微信", "WeChat", "wechat", "引流位"] },
 ];
 const INDEX_CANDIDATES = ["index.html", "dist/index.html", "build/index.html", "public/index.html"];
@@ -125,7 +125,7 @@ Checks:
   - fixed-routine keywords are present
   - 24 cases can be extracted from data/cases.json, inline scripts, or local script files
   - every case has 7 extract fields, 4 value scores, and 4 pillars
-  - hidden connections, action list, Jincheng view, and WeChat lead are present
+  - hidden connections, action list, business translation, and WeChat lead are present
   - visible page text and case data do not leak TODO/undefined/null
 `);
 }

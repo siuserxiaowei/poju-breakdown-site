@@ -131,15 +131,6 @@
     `).join("");
   }
 
-  function renderJinchengSummary() {
-    const node = $("[data-view-card]");
-    if (!node) return;
-    node.innerHTML = `
-      <h3>业务转译原则</h3>
-      <p>${escapeHtml(meta.jinchengSummary || "把嘉宾内容转成自己的业务语言，再做公开输出和私域承接。")}</p>
-    `;
-  }
-
   function themes() {
     return ["全部", ...Array.from(new Set(cases.map((item) => item.theme).filter(Boolean)))];
   }
@@ -174,7 +165,7 @@
       item.methodFramework,
       asText(item.tools),
       item.quote,
-      item.jinchengView,
+      item.businessTranslation,
       Object.values(item.pillars || {}).join(" "),
       Object.values(item.actionList || {}).join(" "),
     ].join(" ").toLowerCase();
@@ -272,8 +263,8 @@
             ${renderActionList(item.actionList)}
           </div>
           <div class="jc-view">
-            <h4>锦成视角</h4>
-            <p>${escapeHtml(item.jinchengView)}</p>
+            <h4>业务转译</h4>
+            <p>${escapeHtml(item.businessTranslation)}</p>
           </div>
         </section>
       </article>
@@ -310,7 +301,6 @@
     renderPipeline();
     renderConnections();
     renderGlobalActions();
-    renderJinchengSummary();
     renderFilters();
     renderCases();
     installSearch();
