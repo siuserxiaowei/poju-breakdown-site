@@ -26,9 +26,11 @@ const placeholderNames = [
   "__CSS__",
   "__JS__",
   "__BUILD_TIME__",
+  "__WECHAT_VALUE__",
+  "__WECHAT_LEAD_COPY__",
 ];
 
-const requiredPlaceholders = ["__SITE_TITLE__", "__SITE_DATA__", "__CSS__", "__JS__"];
+const requiredPlaceholders = ["__SITE_TITLE__", "__SITE_DATA__", "__CSS__", "__JS__", "__WECHAT_VALUE__"];
 
 const buildInputs = [
   ["data/site-meta.json", paths.siteMeta, "站点元信息 JSON"],
@@ -109,6 +111,11 @@ async function buildHtml() {
   const ogTitle = pickString(meta.ogTitle, meta.openGraph?.title, title);
   const ogDescription = pickString(meta.ogDescription, meta.openGraph?.description, description);
   const language = pickString(meta.lang, meta.language, "zh-CN");
+  const wechatValue = pickString(meta.wechat, meta.wechatId, meta.wechatPlaceholder, "未配置微信号");
+  const wechatLeadCopy = pickString(
+    meta.wechatLeadCopy,
+    `微信号：${wechatValue}。后续 Markdown 转换、网页源码和术语道模板，都从这里承接。`
+  );
 
   const html = replacePlaceholders(template, {
     __LANG__: escapeHtml(language),
@@ -120,6 +127,8 @@ async function buildHtml() {
     __CSS__: safeInlineStyle(css),
     __JS__: safeInlineScript(js),
     __BUILD_TIME__: escapeHtml(siteData.generatedAt),
+    __WECHAT_VALUE__: escapeHtml(wechatValue),
+    __WECHAT_LEAD_COPY__: escapeHtml(wechatLeadCopy),
   });
 
   validateRenderedHtml(html);

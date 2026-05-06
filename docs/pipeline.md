@@ -38,7 +38,7 @@ npm run build
   "globalActions": [],
   "stats": [],
   "wechat": {
-    "label": "微信号待填写"
+    "label": "siuserxiaowei"
   }
 }
 ```
