@@ -3,6 +3,7 @@
 import { access, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import vm from "node:vm";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -197,13 +198,41 @@ function validateRenderedHtml(html) {
   if (!html.includes("<!doctype html>") || !html.includes('id="site-data"')) {
     throw new Error("Rendered HTML failed basic structure validation.");
   }
+  validateInlineScriptsSyntax(html);
 }
 
 function replacePlaceholders(template, replacements) {
   return Object.entries(replacements).reduce(
-    (html, [placeholder, value]) => html.replaceAll(placeholder, value),
+    (html, [placeholder, value]) => html.replaceAll(placeholder, () => value),
     template
   );
+}
+
+function validateInlineScriptsSyntax(html) {
+  const scriptRe = /<script\b([^>]*)>([\s\S]*?)<\/script>/gi;
+  let match;
+  let index = 0;
+
+  while ((match = scriptRe.exec(html)) !== null) {
+    index += 1;
+    const attrs = match[1] ?? "";
+    const code = match[2] ?? "";
+    const type = getAttr(attrs, "type");
+    const src = getAttr(attrs, "src");
+
+    if (src || type === "application/json" || !code.trim()) continue;
+
+    try {
+      new vm.Script(code, { filename: `inline-script-${index}.js` });
+    } catch (error) {
+      throw new Error(`Rendered HTML contains invalid JavaScript in inline script ${index}: ${error.message}`);
+    }
+  }
+}
+
+function getAttr(attrs, name) {
+  const pattern = new RegExp(`${name}\\s*=\\s*["']([^"']+)["']`, "i");
+  return pattern.exec(attrs)?.[1] ?? "";
 }
 
 function formatMissingInputs(missing) {

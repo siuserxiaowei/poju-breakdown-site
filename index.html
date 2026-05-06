@@ -998,7 +998,7 @@
   };
 
   const $ = (selector) => document.querySelector(selector);
-  const $ = (selector) => Array.from(document.querySelectorAll(selector));
+  const $$ = (selector) => Array.from(document.querySelectorAll(selector));
 
   function escapeHtml(value) {
     return String(value ?? "")
@@ -1118,7 +1118,7 @@
       return `<button class="filter${active}" type="button" data-filter="${escapeHtml(theme)}">${escapeHtml(theme)} · ${count}</button>`;
     }).join("");
 
-    $(".filter").forEach((button) => {
+    $$(".filter").forEach((button) => {
       button.addEventListener("click", () => {
         state.activeTheme = button.dataset.filter;
         renderFilters();
@@ -1266,7 +1266,7 @@
       });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
 
-    $(".reveal").forEach((node) => observer.observe(node));
+    $$(".reveal").forEach((node) => observer.observe(node));
   }
 
   function init() {
