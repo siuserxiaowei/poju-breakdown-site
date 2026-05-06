@@ -29,7 +29,7 @@ const ROUTINE_KEYWORDS = [
 const SECTION_CHECKS = [
   { label: "隐藏连接", tokens: ["隐藏连接", "跨内容隐藏连接", "connectionList", "connections"] },
   { label: "行动清单", tokens: ["行动清单", "Action List", "globalActions", "mini-action"] },
-  { label: "业务转译", tokens: ["业务转译", "businessTranslation", "jc-view"] },
+  { label: "小伟视角", tokens: ["小伟视角", "xiaoweiView", "jc-view"] },
   { label: "微信引流位", tokens: ["微信", "WeChat", "wechat", "引流位"] },
 ];
 const INDEX_CANDIDATES = ["index.html", "dist/index.html", "build/index.html", "public/index.html"];

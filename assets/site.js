@@ -165,7 +165,7 @@
       item.methodFramework,
       asText(item.tools),
       item.quote,
-      item.businessTranslation,
+      item.xiaoweiView,
       Object.values(item.pillars || {}).join(" "),
       Object.values(item.actionList || {}).join(" "),
     ].join(" ").toLowerCase();
@@ -263,8 +263,8 @@
             ${renderActionList(item.actionList)}
           </div>
           <div class="jc-view">
-            <h4>业务转译</h4>
-            <p>${escapeHtml(item.businessTranslation)}</p>
+            <h4>小伟视角</h4>
+            <p>${escapeHtml(item.xiaoweiView)}</p>
           </div>
         </section>
       </article>
